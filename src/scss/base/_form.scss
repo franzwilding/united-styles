@@ -1,0 +1,18 @@
+
+button, input[type="submit"], input[type="button"] {
+  @extend %button;
+}
+
+input[type="text"], [type="email"], [type="phone"], [type="number"] {
+  border: 1px solid $color-grey-light;
+  line-height: $line-height-big;
+  font-size: $font-size-big;
+  padding: 1px 10px 2px;
+  color: $color-grey-dark2;
+  display: block;
+  width: 100%;
+}
+
+label {
+  @extend %font-alt;
+}

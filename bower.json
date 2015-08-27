@@ -1,0 +1,32 @@
+{
+  "name": "united styles",
+  "version": "0.0.0",
+  "authors": [
+    "Franz Wilding <franz@2robots.at>"
+  ],
+  "description": "css & js for websites and applications",
+  "main": "build/united.css",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "css",
+    "js",
+    "framework",
+    "style",
+    "united"
+  ],
+  "license": "MIT",
+  "homepage": "united-cms.org",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.4",
+    "neat": "~1.7.2"
+  }
+}

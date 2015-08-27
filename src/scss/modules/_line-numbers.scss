@@ -1,0 +1,82 @@
+
+.united-line-numbers {
+
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  left: 0;
+  right: auto;
+
+  &.right {
+    left: auto;
+    right: 0;
+
+    ul, ol {
+      li {
+        a {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+
+    li {
+      @extend %font-alt;
+
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 0 5px;
+        text-align: right;
+        width: 40px;
+
+        &:hover {
+          color: $color-main;
+        }
+      }
+
+      &.active {
+        a {
+          color: $color-main;
+        }
+      }
+    }
+  }
+
+  &.striped {
+    li {
+      color: $color-grey;
+      a {
+        color: $color-grey;
+      }
+      
+      &:nth-child(2n) {
+        color: $color-grey-dark;
+        a {
+          color: $color-grey-dark;
+        }
+      }
+    }
+  }
+
+  &.auto-height, &.auto-width {
+    ul, ol {
+      @include display(flex);
+      li {
+        @include flex(1);
+      }
+    }
+
+    &.auto-height {
+      ul, ol {
+        @include flex-direction(column);
+      }
+    }
+  }
+}

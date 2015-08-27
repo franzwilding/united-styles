@@ -1,0 +1,36 @@
+
+.united-editor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  //overflow: hidden;
+
+  .united-editor-area {
+    background: $color-grey-light2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &.fixed-line-numbers {
+    overflow: hidden;
+    
+    .united-editor-area {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  .united-line-numbers + .united-editor-area {
+    left: 40px;
+  }
+
+  .united-line-numbers.right + .united-editor-area {
+    left: 0;
+    right: 40px;
+  }
+}

@@ -1,0 +1,21 @@
+
+.united-field {
+  position: relative;
+  margin: 20px 0;
+
+  &.inline-label {
+    @include display(flex);
+
+    label {
+      display: inline-block;
+      line-height: $line-height-big * 1.5;
+      padding-right: 10px;
+      vertical-align: middle;
+      min-width: 100px;
+    }
+
+    input {
+      @include flex(1);
+    }
+  }
+}

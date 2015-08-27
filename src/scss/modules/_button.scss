@@ -1,0 +1,27 @@
+
+.united-button {
+  @extend %button;
+}
+
+.united-buttons {
+  > * {
+    margin: 0 5px;
+
+    &.small {
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+  }
+
+  &.centered {
+    text-align: center;
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
+}

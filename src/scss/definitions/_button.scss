@@ -1,0 +1,67 @@
+
+%button {
+  display: inline-block;
+  border: 2px solid $color-main;
+  color: $color-main;
+  line-height: $line-height-big;
+  text-decoration: none;
+  min-width: 150px;
+  padding: 0 10px;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+
+  &:hover, &.active {
+    background: $color-main;
+    color: white;
+  }
+
+  &.small {
+    font-size: $font-size-small;
+    line-height: $line-height-big;
+    min-width: 100px;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.auto-width {
+    min-width: 0;
+    width: auto;
+  }
+
+  &.icon-left, &.icon-right {
+    padding-left: 30px;
+    min-width: 130px;
+    position: relative;
+    &.small {
+      min-width: 80px;
+    }
+
+    &.icon-right {
+      padding-left: 10px;
+      padding-right: 30px;
+    }
+
+    > .icon {
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  &.main { color: $color-main; border-color: $color-main; &:hover, &.active { background-color: $color-main; }}
+  &.positive { color: $color-positive; border-color: $color-positive; &:hover, &.active { background-color: $color-positive; }}
+  &.negative { color: $color-negative; border-color: $color-negative; &:hover, &.active { background-color: $color-negative; }}
+  &.grey { color: $color-grey; border-color: $color-grey; &:hover, &.active { background-color: $color-grey; }}
+  &.grey-dark { color: $color-grey-dark; border-color: $color-grey-dark; &:hover, &.active { background-color: $color-grey-dark; }}
+  &.grey-dark2 { color: $color-grey-dark2; border-color: $color-grey-dark2; &:hover, &.active { background-color: $color-grey-dark2; }}
+
+  &.main, &.positive, &.negative, &.grey, &.grey-dark, &.grey-dark2 {
+    &:hover {
+      color: white;
+    }
+  }
+}
