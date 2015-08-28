@@ -1,0 +1,63 @@
+
+.united-sidebar {
+  @extend %box;
+  width: 300px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: auto;
+  z-index: 100;
+  overflow: auto;
+  left: -300px;
+  @include transition(left 0.2s linear);
+
+  &.open {
+    left: 0;
+    width: 100%;
+
+    &.right {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &.right {
+    left: auto;
+    right: -300px;
+    @include transition(right 0.2s linear);
+  }
+
+  @include media($query-semi-medium) {
+    left: 0;
+    border-right-width: 2px;
+
+    &.right {
+      left: auto;
+      right: 0;
+      border-right-width: 0;
+      border-left-width: 2px;
+    }
+
+    & + * {
+      margin-left: 300px;
+      @include transition(margin-left 0.2s linear);
+    }
+
+    &.right + * {
+      margin-left: 0;
+      margin-right: 300px;
+      @include transition(margin-right 0.2s linear);
+    }
+
+    &.open {
+      left: 0;
+      width: 300px;
+
+      &.right {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}
