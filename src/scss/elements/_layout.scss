@@ -1,0 +1,36 @@
+
+.united-container {
+  padding: 0 20px;
+  display: block;
+  position: relative;
+  max-width: $container-max-width + 40;
+  margin: 0 auto;
+}
+
+.united-row {
+  @include row();
+
+  @for $i from 1 through 3 {
+    .width-#{$i} {
+      @include span-columns(6);
+    }
+  }
+
+  @for $i from 4 through 12 {
+    .width-#{$i} {
+      @include span-columns(12);
+    }
+  }
+
+  @include media($query-semi-medium) {
+    @for $i from 1 through 12 {
+      .width-#{$i} {
+        @include span-columns($i);
+      }
+    }
+  }
+
+  .omega {
+    @include omega();
+  }
+}

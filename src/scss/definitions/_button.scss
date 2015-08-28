@@ -42,6 +42,11 @@
     &.icon-right {
       padding-left: 10px;
       padding-right: 30px;
+
+      > .icon {
+        left: auto;
+        right: 10px;
+      }
     }
 
     > .icon {
