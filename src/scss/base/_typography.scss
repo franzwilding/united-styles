@@ -11,6 +11,10 @@ body {
   padding: 0;
 }
 
+p {
+  margin-top: 0;
+}
+
 a {
   color: $color-grey-dark;
   text-decoration: underline;
@@ -26,4 +30,8 @@ h5 {
   @extend %font-alt;
   font-size: $font-size-small;
   margin: 10px 0 0 0;
+}
+
+ul, ol {
+  margin-top: 0;
 }

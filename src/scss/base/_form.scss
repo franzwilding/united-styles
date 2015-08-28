@@ -3,7 +3,7 @@ button, input[type="submit"], input[type="button"] {
   @extend %button;
 }
 
-input[type="text"], [type="email"], [type="phone"], [type="number"] {
+input[type="text"], [type="email"], [type="phone"], [type="number"], textarea {
   border: 1px solid $color-grey-light;
   line-height: $line-height-big;
   font-size: $font-size-big;
@@ -13,6 +13,19 @@ input[type="text"], [type="email"], [type="phone"], [type="number"] {
   width: 100%;
 }
 
+input[type="checkbox"], [type="radio"] {
+  height: 40px;
+  padding: 1px 10px 2px;
+}
+
 label {
   @extend %font-alt;
+}
+
+textarea {
+  resize: vertical;
+  font-size: $font-size;
+  line-height: $line-height;
+  padding: 6px 10px;
+  min-height: 100px;
 }

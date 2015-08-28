@@ -1,8 +1,8 @@
 
 %button {
   display: inline-block;
-  border: 2px solid $color-main;
-  color: $color-main;
+  border: 2px solid $color-grey;
+  color: $color-grey;
   line-height: $line-height-big;
   text-decoration: none;
   min-width: 150px;
@@ -12,7 +12,7 @@
   background: none;
 
   &:hover, &.active {
-    background: $color-main;
+    background: $color-grey;
     color: white;
   }
 
@@ -63,8 +63,9 @@
   &.grey { color: $color-grey; border-color: $color-grey; &:hover, &.active { background-color: $color-grey; }}
   &.grey-dark { color: $color-grey-dark; border-color: $color-grey-dark; &:hover, &.active { background-color: $color-grey-dark; }}
   &.grey-dark2 { color: $color-grey-dark2; border-color: $color-grey-dark2; &:hover, &.active { background-color: $color-grey-dark2; }}
+  &.gold { color: $color-gold; border-color: $color-gold; &:hover, &.active { background-color: $color-gold; } }
 
-  &.main, &.positive, &.negative, &.grey, &.grey-dark, &.grey-dark2 {
+  &.main, &.positive, &.negative, &.grey, &.grey-dark, &.grey-dark2, &.gold {
     &:hover {
       color: white;
     }
