@@ -1,5 +1,5 @@
 
-.united-global-tabs {
+.united-tabbar {
   @extend %box;
   border-bottom-width: 2px;
 
@@ -51,7 +51,7 @@
   }
 }
 
-.united-global-tabs-space {
+.united-tabbar-space {
   display: block;
   clear: both;
   height: 50px;
