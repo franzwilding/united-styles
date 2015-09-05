@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<aside class="united-sidebar">
+<aside class="united-sidebar fixed left">
 
   <a href="/" class="united-button small grey icon-left"><i class="icon ion-android-arrow-back"></i>Back</a>
   <div class="united-hr"></div>
@@ -27,7 +27,7 @@
     <div class="united-hr"></div>
 
     <h4>Basic usage</h4>
-    <p>This will render a sidebar, fixed to the left 300px of the screen. On small devices, the sidebar will be hidden by default and shown 100% width, when a class <strong>.open</strong> is added.</p>
+    <p>This will render a 300px wide sidebar.</p>
     <pre><code data-language="html">
   <div class="united-sidebar">Sidebar</div>
   <div>
@@ -35,10 +35,12 @@
   </div>
     </code></pre>
 
-    <h4>Direction</h4>
-    <p>When the class <strong>.right</strong> is added, the sidebar will be fixed to the right side of the screen
+    <h4>Fixable and Direction</h4>
+    <p>Sidebars are fixeable, when you add the class <strong>.fixed</strong> and a direction (<strong>.top, .right, .bottom, .left</strong>), the sidebar will be fixed to the side of the window.</p>
+    <p>On small devices, the sidebar will be hidden by default and shown 100% width, when a class <strong>.open</strong> is added.</p>
+    <p class="united-message grey"><i class="icon ion-information-circled"></i> A fixed sidebar should always be placed <strong>before</strong> a content element in the DOM, because it will add margin to the next element.</p>
     <pre><code data-language="html">
-  <div class="united-sidebar right">Sidebar</div>
+  <div class="united-sidebar fixed left">Sidebar</div>
   <div>
     <div class="united-container">Content</div>
   </div>

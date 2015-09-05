@@ -10,6 +10,9 @@
   text-align: center;
   cursor: pointer;
   background: none;
+  -webkit-appearance: none;
+  -webkit-border-radius:0;
+  border-radius:0;
 
   &:hover, &.active {
     background: $color-grey;

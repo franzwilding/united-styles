@@ -1,0 +1,39 @@
+
+%fixable {
+  &.fixed {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+
+    &.top {
+      top: 0;
+      right: 0;
+      bottom: auto;
+      left: 0;
+    }
+
+    &.right {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: auto;
+    }
+
+    &.bottom {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &.left {
+      top: 0;
+      right: auto;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

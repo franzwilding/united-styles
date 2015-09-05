@@ -5,6 +5,14 @@
   position: relative;
   max-width: $container-max-width + 40;
   margin: 0 auto;
+
+  &.responsive-padding {
+    padding: 0;
+
+    @include media($query-medium) {
+      padding: 20px;
+    }
+  }
 }
 
 .united-row {

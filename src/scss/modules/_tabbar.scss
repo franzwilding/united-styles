@@ -1,6 +1,7 @@
 
 .united-tabbar {
   @extend %box;
+  @extend %fixable;
   border-bottom-width: 2px;
 
   &.bottom {
