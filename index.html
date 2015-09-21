@@ -1,42 +1,26 @@
+---
+title: Start
+---
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>united styles</title>
-  <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/franzwilding/united-styles/master/build/united.css" />
-</head>
+{% include head.html %}
 <body>
-
-<aside class="united-sidebar fixed left">
-  <nav>
-    <h5>Elements</h5>
-    <ol>
-      <li><a href="elements/button.html"><i class="icon ion-navicon"></i>Buttons</a></li>
-      <li><a href="elements/form.html"><i class="icon ion-navicon"></i>Form</a></li>
-      <li><a href="elements/layout.html"><i class="icon ion-navicon"></i>Layout</a></li>
-      <li><a href="elements/typography.html"><i class="icon ion-navicon"></i>Typography</a></li>
-      <li><a href="elements/util.html"><i class="icon ion-navicon"></i>Util</a></li>
-    </ol>
-
-    <h5>Global Modules</h5>
-    <ol>
-      <li><a href="global-modules/sidebar.html"><i class="icon ion-navicon"></i>Sidebar</a></li>
-      <li><a href="global-modules/tabbar.html"><i class="icon ion-navicon"></i>Tabbar</a></li>
-    </ol>
-  </nav>
-</aside>
-
+{% include menu.html %}
 <div>
   <section class="united-container">
     <div class="united-br"></div>
     <div class="united-br"></div>
-    <h1>United styles 0.0.5</h1>
+    <h1>{{ site.title }} {{ site.version }}</h1>
     <div class="united-hr"></div>
+
+    <p>United Styles is a minimalistic css (and soon js) framework for web and mobile apps.</p>
+
+    <p>
+      <a class="united-button icon-left grey-dark2 " href="https://github.com/franzwilding/united-styles"><i class="icon ion-social-github"></i> Github</a>
+    </p>
+
   </section>
 </div>
-
+{% include footer.html %}
 </body>
 </html>

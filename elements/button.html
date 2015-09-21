@@ -1,171 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>united styles - tabs</title>
-  <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/franzwilding/united-styles/master/build/united.css" />
-</head>
-<body>
-
-<div class="united-container">
-
-  <div class="united-br"></div>
-  <a href="/" class="united-button small grey icon-left"><i class="icon ion-android-arrow-back"></i>Back</a>
-
-  <h2>Buttons</h2>
-  <div class="united-hr"></div>
-
-  <h4>Basic buttons</h4>
-  <div class="united-row">
-    <pre class="width-8"><code data-language="html">
-  <a class="united-button">Button</a>
-  <a class="united-button small">Small button</a>
-    </code></pre>
-    <div class="width-4">
-      <p><a class="united-button">Button</a></p>
-      <p><a class="united-button small">Small button</a></p>
-    </div>
+---
+title: Button
+layout: page
+---
+<h4>Basic buttons</h4>
+<div class="united-row">
+  <pre class="width-8"><code data-language="html">
+<a class="united-button">Button</a>
+<a class="united-button small">Small button</a>
+  </code></pre>
+  <div class="width-4">
+    <p><a class="united-button">Button</a></p>
+    <p><a class="united-button small">Small button</a></p>
   </div>
-
-  <h4>Icons</h4>
-  <div class="united-row">
-    <pre class="width-8"><code data-language="html">
-  <a class="united-button"><i class="icon ion-heart"></i></a>
-  <a class="united-button"><i class="icon ion-heart"></i> Icon</a>
-    </code></pre>
-    <div class="width-4">
-      <p><a class="united-button"><i class="icon ion-heart"></i></a></p>
-      <p><a class="united-button"><i class="icon ion-heart"></i> Icon</a></p>
-    </div>
-  </div>
-  <div class="united-row">
-    <pre class="width-8"><code data-language="html">
-  <a class="united-button icon-left"><i class="icon ion-heart"></i> Right</a>
-  <a class="united-button icon-right"><i class="icon ion-heart"></i> Left</a>
-    </code></pre>
-    <div class="width-4">
-      <p><a class="united-button icon-left"><i class="icon ion-heart"></i> Right</a></p>
-      <p><a class="united-button icon-right"><i class="icon ion-heart"></i> Left</a></p>
-    </div>
-  </div>
-
-  <h4>Width</h4>
-  <div class="united-row">
-    <pre class="width-8"><code data-language="html">
-  <a class="united-button full-width">Full width</a>
-  <a class="united-button auto-width">Auto width</a>
-  <a class="united-button auto-width"><i class="icon ion-heart"></i></a>
-    </code></pre>
-    <div class="width-4">
-      <p><a class="united-button full-width">Full width</a></p>
-      <p>
-        <a class="united-button auto-width">Auto width</a>
-        <a class="united-button auto-width"><i class="icon ion-heart"></i></a>
-      </p>
-    </div>
-  </div>
-
-  <h4>Colors</h4>
-  <div class="united-row">
-    <pre class="width-8"><code data-language="html">
-  <a class="united-button">Default</a>
-  <a class="united-button main">Main</a>
-  <a class="united-button positive">Positive</a>
-  <a class="united-button negative">Negative</a>
-  <a class="united-button grey">Grey</a>
-  <a class="united-button grey-dark">Grey dark</a>
-  <a class="united-button grey-dark2">Grey dark 2</a>
-  <a class="united-button gold">Gold</a>
-    </code></pre>
-    <div class="width-4">
-      <p class="united-buttons">
-        <a class="united-button auto-width">Default</a>
-        <a class="united-button main auto-width">Main</a>
-        <a class="united-button positive auto-width">Positive</a>
-        <a class="united-button negative auto-width">Negative</a>
-        <a class="united-button grey auto-width">Grey</a>
-        <a class="united-button grey-dark auto-width">Grey dark</a>
-        <a class="united-button grey-dark2 auto-width">Grey dark 2</a>
-        <a class="united-button gold auto-width">Gold</a>
-      </p>
-    </div>
-  </div>
-
-  <h4>Buttons group</h4>
-  <div class="united-row">
-    <pre class="width-8"><code data-language="html">
-  <p class="united-buttons">
-    <a class="united-button small auto-width">Button</a>
-    <a class="united-button small auto-width">Button</a>
-    <a class="united-button small auto-width">Button</a>
-  </p>
-    </code></pre>
-    <div class="width-4">
-      <p class="united-buttons">
-        <a class="united-button small auto-width">Button</a>
-        <a class="united-button small auto-width">Button</a>
-        <a class="united-button small auto-width">Button</a>
-      </p>
-    </div>
-  </div>
-  <div class="united-row">
-    <pre class="width-8"><code data-language="html">
-  <p class="united-buttons left">
-    <a class="united-button small auto-width">Button</a>
-    <a class="united-button small auto-width">Button</a>
-    <a class="united-button small auto-width">Button</a>
-  </p>
-    </code></pre>
-    <div class="width-4">
-      <p class="united-buttons left">
-        <a class="united-button small auto-width">Button</a>
-        <a class="united-button small auto-width">Button</a>
-        <a class="united-button small auto-width">Button</a>
-      </p>
-    </div>
-  </div>
-  <div class="united-row">
-    <pre class="width-8"><code data-language="html">
-  <p class="united-buttons right">
-    <a class="united-button small auto-width">Button</a>
-    <a class="united-button small auto-width">Button</a>
-    <a class="united-button small auto-width">Button</a>
-  </p>
-    </code></pre>
-    <div class="width-4">
-      <p class="united-buttons right">
-        <a class="united-button small auto-width">Button</a>
-        <a class="united-button small auto-width">Button</a>
-        <a class="united-button small auto-width">Button</a>
-      </p>
-    </div>
-  </div>
-  <div class="united-row">
-    <pre class="width-8"><code data-language="html">
-  <p class="united-buttons centered">
-    <a class="united-button small auto-width">Button</a>
-    <a class="united-button small auto-width">Button</a>
-    <a class="united-button small auto-width">Button</a>
-  </p>
-    </code></pre>
-    <div class="width-4">
-      <p class="united-buttons centered">
-        <a class="united-button small auto-width">Button</a>
-        <a class="united-button small auto-width">Button</a>
-        <a class="united-button small auto-width">Button</a>
-      </p>
-    </div>
-  </div>
-
 </div>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
+<h4>Icons</h4>
+<div class="united-row">
+  <pre class="width-8"><code data-language="html">
+<a class="united-button"><i class="icon ion-heart"></i></a>
+<a class="united-button"><i class="icon ion-heart"></i> Icon</a>
+  </code></pre>
+  <div class="width-4">
+    <p><a class="united-button"><i class="icon ion-heart"></i></a></p>
+    <p><a class="united-button"><i class="icon ion-heart"></i> Icon</a></p>
+  </div>
+</div>
+<div class="united-row">
+  <pre class="width-8"><code data-language="html">
+<a class="united-button icon-left"><i class="icon ion-heart"></i> Right</a>
+<a class="united-button icon-right"><i class="icon ion-heart"></i> Left</a>
+  </code></pre>
+  <div class="width-4">
+    <p><a class="united-button icon-left"><i class="icon ion-heart"></i> Right</a></p>
+    <p><a class="united-button icon-right"><i class="icon ion-heart"></i> Left</a></p>
+  </div>
+</div>
 
-</body>
-</html>
+<h4>Width</h4>
+<div class="united-row">
+  <pre class="width-8"><code data-language="html">
+<a class="united-button full-width">Full width</a>
+<a class="united-button auto-width">Auto width</a>
+<a class="united-button auto-width"><i class="icon ion-heart"></i></a>
+  </code></pre>
+  <div class="width-4">
+    <p><a class="united-button full-width">Full width</a></p>
+    <p>
+      <a class="united-button auto-width">Auto width</a>
+      <a class="united-button auto-width"><i class="icon ion-heart"></i></a>
+    </p>
+  </div>
+</div>
+
+<h4>Colors</h4>
+<div class="united-row">
+  <pre class="width-8"><code data-language="html">
+<a class="united-button">Default</a>
+<a class="united-button main">Main</a>
+<a class="united-button positive">Positive</a>
+<a class="united-button negative">Negative</a>
+<a class="united-button grey">Grey</a>
+<a class="united-button grey-dark">Grey dark</a>
+<a class="united-button grey-dark2">Grey dark 2</a>
+<a class="united-button gold">Gold</a>
+  </code></pre>
+  <div class="width-4">
+    <p class="united-buttons">
+      <a class="united-button auto-width">Default</a>
+      <a class="united-button main auto-width">Main</a>
+      <a class="united-button positive auto-width">Positive</a>
+      <a class="united-button negative auto-width">Negative</a>
+      <a class="united-button grey auto-width">Grey</a>
+      <a class="united-button grey-dark auto-width">Grey dark</a>
+      <a class="united-button grey-dark2 auto-width">Grey dark 2</a>
+      <a class="united-button gold auto-width">Gold</a>
+    </p>
+  </div>
+</div>
+
+<h4>Buttons group</h4>
+<div class="united-row">
+  <pre class="width-8"><code data-language="html">
+<p class="united-buttons">
+  <a class="united-button small auto-width">Button</a>
+  <a class="united-button small auto-width">Button</a>
+  <a class="united-button small auto-width">Button</a>
+</p>
+  </code></pre>
+  <div class="width-4">
+    <p class="united-buttons">
+      <a class="united-button small auto-width">Button</a>
+      <a class="united-button small auto-width">Button</a>
+      <a class="united-button small auto-width">Button</a>
+    </p>
+  </div>
+</div>
+<div class="united-row">
+  <pre class="width-8"><code data-language="html">
+<p class="united-buttons left">
+  <a class="united-button small auto-width">Button</a>
+  <a class="united-button small auto-width">Button</a>
+  <a class="united-button small auto-width">Button</a>
+</p>
+  </code></pre>
+  <div class="width-4">
+    <p class="united-buttons left">
+      <a class="united-button small auto-width">Button</a>
+      <a class="united-button small auto-width">Button</a>
+      <a class="united-button small auto-width">Button</a>
+    </p>
+  </div>
+</div>
+<div class="united-row">
+  <pre class="width-8"><code data-language="html">
+<p class="united-buttons right">
+  <a class="united-button small auto-width">Button</a>
+  <a class="united-button small auto-width">Button</a>
+  <a class="united-button small auto-width">Button</a>
+</p>
+  </code></pre>
+  <div class="width-4">
+    <p class="united-buttons right">
+      <a class="united-button small auto-width">Button</a>
+      <a class="united-button small auto-width">Button</a>
+      <a class="united-button small auto-width">Button</a>
+    </p>
+  </div>
+</div>
+<div class="united-row">
+  <pre class="width-8"><code data-language="html">
+<p class="united-buttons centered">
+  <a class="united-button small auto-width">Button</a>
+  <a class="united-button small auto-width">Button</a>
+  <a class="united-button small auto-width">Button</a>
+</p>
+  </code></pre>
+  <div class="width-4">
+    <p class="united-buttons centered">
+      <a class="united-button small auto-width">Button</a>
+      <a class="united-button small auto-width">Button</a>
+      <a class="united-button small auto-width">Button</a>
+    </p>
+  </div>
+</div>
