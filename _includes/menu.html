@@ -6,21 +6,21 @@
     </div>
     <div class="united-hr"></div>
     <h5>Elements</h5>
-    <ol>
+    <ol class="united-navigation icon-left">
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'elements' %}
-          <li{% if p.url == page.url %} class="active"{% endif %}><a href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-android-star-outline"></i> {{ p.title }}</a></li>
+          <li><a{% if p.url == page.url %} class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-android-star-outline"></i> {{ p.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ol>
 
     <h5>Global Modules</h5>
-    <ol>
+    <ol class="united-navigation">
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'global' %}
-          <li{% if p.url == page.url %} class="active"{% endif %}><a href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-grid"></i> {{ p.title }}</a></li>
+          <li><a{% if p.url == page.url %} class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-grid"></i> {{ p.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ol>
