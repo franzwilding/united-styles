@@ -1,7 +1,7 @@
 <aside class="united-sidebar fixed left">
   <nav>
     <div class="united-buttons centered">
-      <a class="united-button main icon-left small" href="/"><i class="icon ion-ios-home"></i> {{ site.title}} {{ site.version }}</a>
+      <a class="united-button main icon-left small" href="{{ site.baseurl }}/"><i class="icon ion-ios-home"></i> {{ site.title}} {{ site.version }}</a>
       <a class="united-button grey-dark2 auto-width small" href="https://github.com/franzwilding/united-styles"><i class="icon ion-social-github"></i></a>
     </div>
     <div class="united-hr"></div>
@@ -10,7 +10,7 @@
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'elements' %}
-          <li{% if p.url == page.url %} class="active"{% endif %}><a href="{{ p.url }}"><i class="icon ion-android-star-outline"></i> {{ p.title }}</a></li>
+          <li{% if p.url == page.url %} class="active"{% endif %}><a href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-android-star-outline"></i> {{ p.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ol>
@@ -20,7 +20,7 @@
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'global' %}
-          <li{% if p.url == page.url %} class="active"{% endif %}><a href="{{ p.url }}"><i class="icon ion-grid"></i> {{ p.title }}</a></li>
+          <li{% if p.url == page.url %} class="active"{% endif %}><a href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-grid"></i> {{ p.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ol>
