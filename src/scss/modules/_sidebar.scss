@@ -9,13 +9,13 @@
   &.fixed {
     &.left {
       left: -300px;
-      @include transition(left 0.2s linear);
+      @include transition(left 0.15s ease-out);
       &.open { left: 0; }
     }
 
     &.right {
       right: -300px;
-      @include transition(right 0.2s linear);
+      @include transition(right 0.15s ease-out);
       &.open { right: 0; }
     }
 
@@ -27,14 +27,14 @@
     &.top {
       top: -300px;
       border-bottom-width: 2px;
-      @include transition(top 0.2s linear);
+      @include transition(top 0.15s ease-out);
       &.open { top: 0; }
     }
 
     &.bottom {
       bottom: -300px;
       border-top-width: 2px;
-      @include transition(bottom 0.2s linear);
+      @include transition(bottom 0.15s ease-out);
       &.open { bottom: 0; }
     }
 
@@ -52,7 +52,7 @@
 
         & + * {
           margin-left: 300px;
-          @include transition(margin-left 0.2s linear);
+          @include transition(margin-left 0.15s ease-out);
         }
       }
 
@@ -62,7 +62,7 @@
 
         & + * {
           margin-right: 300px;
-          @include transition(margin-right 0.2s linear);
+          @include transition(margin-right 0.15s ease-out);
         }
       }
 
@@ -71,7 +71,7 @@
 
         & + * {
           margin-top: 300px;
-          @include transition(margin-top 0.2s linear);
+          @include transition(margin-top 0.15s ease-out);
         }
       }
 
@@ -80,7 +80,7 @@
 
         & + * {
           margin-bottom: 300px;
-          @include transition(margin-bottom 0.2s linear);
+          @include transition(margin-bottom 0.15s ease-out);
         }
       }
 
@@ -91,10 +91,72 @@
           width: 100%;
         }
       }
+    }
+  }
+}
 
+.united-sidebar-toggler {
 
+  position: relative;
+  display: inline-block;
+  @extend %fixable;
+  padding: 18px 15px;
+  text-align: center;
+  font-size: 0;
+  line-height: 100%;
 
+  @include media($query-medium) {
+    display: none;
+  }
 
+  > span {
+    width: 20px;
+    height: 2px;
+    position: relative;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: inline-block;
+    vertical-align: center;
+    background: $color-grey-dark2;
+    font-size: 0;
+
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      height: 2px;
+      width: 20px;
+      background: $color-grey-dark2;
+      top: -6px;
+      left: 50%;
+      margin-left: -10px;
+      @include transform(rotate(0deg));
+      @include transform-origin(9%);
+      @include transition(transform 0.15s ease-out);
+    }
+
+    &:after {
+      top: auto;
+      bottom: -6px;
+    }
+  }
+
+  &.closed {
+    > span {
+      background: none;
+
+      &:before, &:after {
+        background: $color-negative;
+        margin-left: -8px;
+      }
+
+      &:before {
+        @include transform(rotate(45deg));
+      }
+
+      &:after {
+        @include transform(rotate(-45deg));
+      }
     }
   }
 }

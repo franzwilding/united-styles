@@ -25,6 +25,12 @@
     min-width: 100px;
   }
 
+  &.mini {
+    @extend %font-alt-plain;
+    font-size: $font-size-mini;
+    min-width: 100px;
+  }
+
   &.full-width {
     width: 100%;
   }
@@ -36,11 +42,7 @@
 
   &.icon-left, &.icon-right {
     padding-left: 30px;
-    min-width: 130px;
     position: relative;
-    &.small {
-      min-width: 80px;
-    }
 
     &.icon-right {
       padding-left: 10px;

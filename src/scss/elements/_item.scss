@@ -1,0 +1,39 @@
+
+.united-item {
+
+  margin-top: 40px;
+
+  &:first-item {
+    margin-top: 0;
+  }
+
+  > .united-buttons {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  @include media($query-semi-medium) {
+    @include align-items(center);
+    @include display(flex);
+    @include justify-content(center);
+
+    > .united-buttons {
+      padding-left: 10px;
+      white-space: nowrap;
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
+}
+
+.united-item-meta {
+  @extend %font-alt;
+  font-size: $font-size-mini;
+  border-top: 1px solid $color-grey-light;
+  border-bottom: 1px solid $color-grey-light;
+  padding: 5px 3px;
+
+  > * {
+    margin: 0;
+  }
+}

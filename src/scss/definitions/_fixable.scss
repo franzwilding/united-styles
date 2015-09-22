@@ -13,13 +13,9 @@
       right: 0;
       bottom: auto;
       left: 0;
-    }
 
-    &.right {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: auto;
+      &.left { bottom: auto; }
+      &.right { bottom: auto; }
     }
 
     &.bottom {
@@ -27,6 +23,16 @@
       right: 0;
       bottom: 0;
       left: 0;
+
+      &.left { top: auto; }
+      &.right { top: auto; }
+    }
+
+    &.right {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: auto;
     }
 
     &.left {
