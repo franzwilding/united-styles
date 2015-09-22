@@ -3,16 +3,15 @@
 {% include head.html %}
 <body>
 {% include menu.html %}
-<div><div class="united-container">
-
-  <div class="united-br"></div>
-
-  <h1>{{ page.title }}</h1>
-  <div class="united-hr"></div>
-
-  {{ page.content }}
-
-</div></div>
+<div>
+  <a class="united-sidebar-toggler fixed top right" style="margin: 11px 6px;" href="#"><span>Toggle menu</span></a>
+  <div class="united-container">
+    <div class="united-br"></div>
+    <h1>{{ page.title }}</h1>
+    <div class="united-hr"></div>
+    {{ page.content }}
+  </div>
+</div>
 {% include footer.html %}
 </body>
 </html>
