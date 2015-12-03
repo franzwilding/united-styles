@@ -1,0 +1,26 @@
+
+@mixin colors($text: false, $border: false, $background: false, $white-text: false, $prefix:'') {
+  @each $name, $color in $colors {
+    &.#{$prefix}#{$name} {
+      @if($text) { color: $color; }
+      @if($border) { border-color: $color; }
+      @if($background) {
+        background-color: $color;
+      }
+    }
+  }
+  @each $name, $gradient in map-get($gradients, 'linear') {
+    &.#{$prefix}#{$name}-gradient {
+      @if($background) {
+        @include linear-gradient($gradient...);
+      }
+    }
+  }
+  @each $name, $gradient in map-get($gradients, 'radial') {
+    &.#{$prefix}#{$name}-gradient {
+      @if($background) {
+        @include radial-gradient($gradient...);
+      }
+    }
+  }
+}

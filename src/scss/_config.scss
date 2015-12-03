@@ -1,30 +1,69 @@
 
 /**
+ * The prefix will be added to all class selectors. So you can avoid conflicts
+ * with other librarys.*/
+//$u-prefix:              '.u';
+$u-prefix:                '';
+
+/**
  * Font config.
  */
 $font-family:             'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Tahoma', sans-serif;
 $font-family-alt:         'Arial Narrow', 'Arial', sans-serif;
 
 $font-size-base:          62.5%;
-$font-size:               1.4rem;
-$font-size-small:         1.2rem;
 $font-size-mini:          1.0rem;
+$font-size-small:         1.2rem;
+$font-size:               1.4rem;
 $font-size-big:           1.6rem;
+$line-height-small:       120%;
 $line-height:             150%;
 $line-height-big:         220%;
+$line-height-large:       260%;
+
+$font-size-h1:            5.0rem;
+$font-size-h2:            3.5rem;
+$font-size-h3:            2.5rem;
+$font-size-h4:            2.0rem;
+$font-size-h5:            1.4rem;
+$font-size-h6:            1.2rem;
+
+$size-mini:               24px;
+$size-small:              30px;
+$size:                    34px;
+$size-big:                40px;
 
 /**
  * Color config.
+ * This map will be used to generate automatic color-classes. If you want to add
+ * aditional colors, you just need to add it here.
  */
-$color-main:              #4A90E2;
-$color-positive:          #7ED321;
-$color-negative:          #CC1D48;
-$color-grey:              #9B9B9B;
-$color-grey-light:        #E2E2E2;
-$color-grey-light2:       #FAFAFA;
-$color-grey-dark:         #7F7F7F;
-$color-grey-dark2:        #4A4A4A;
-$color-gold:              #FBB349;
+$colors: (
+  'white':        #FFFFFF,
+  'grey':         #9B9B9B,
+  'grey-light':   #E2E2E2,
+  'grey-light2':  #FAFAFA,
+  'grey-dark':    #7F7F7F,
+  'grey-dark2':   #4A4A4A,
+  'green':        #7ED321,
+  'red':          #CC1D48,
+  'red-light':    #F2786D,
+  'gold':         #FBB349,
+  'blue':         #4A90E2,
+  'blue-dark':    #14538C,
+  'blue-dark2':   #1B3140,
+  'black':        #2B2B2B
+);
+
+$color-default:     'black';          // Will be used for text
+$color-main:        'blue-dark2';     // Will be used for headlines, links and as default-color for buttons
+
+$gradients: (
+  'linear': (),
+  'radial': (
+    'red': (circle at 11% 133%, map-get($colors, 'red') 0%, map-get($colors, 'red-light') 100%)
+  )
+);
 
 /**
  * Layout config.

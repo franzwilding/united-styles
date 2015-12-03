@@ -1,0 +1,20 @@
+
+#{$u-prefix}.centered {
+  text-align: center;
+}
+
+#{$u-prefix}.left {
+  text-align: left;
+}
+
+#{$u-prefix}.right {
+  text-align: right;
+}
+
+p#{$u-prefix}.small {
+  font-size: $font-size-small;
+}
+
+p#{$u-prefix}.big {
+  font-size: $font-size-big;
+}

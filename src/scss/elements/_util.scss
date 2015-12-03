@@ -1,9 +1,9 @@
 
-.united-hr {
+#{$u-prefix}.hr {
   height: 2px;
   width: auto;
   display: block;
-  background: $color-grey-light;
+  background: rgba(0,0,0,0.11);
   margin: 14px 0;
 
   @include media($query-semi-medium) {
@@ -12,7 +12,7 @@
   }
 }
 
-.united-br {
+#{$u-prefix}.br {
   height: 15px;
   width: auto;
   display: block;

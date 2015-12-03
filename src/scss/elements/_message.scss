@@ -1,10 +1,10 @@
 
-.united-message {
+#{$u-prefix}.message {
 
   padding: 5px 10px;
-  background: $color-grey-light2;
-  border: 1px solid $color-grey-light;
-  border-radius: 2px; 
+  //background: $color-grey-light2;
+  //border: 1px solid $color-grey-light;
+  border-radius: 2px;
 
   &.small {
     font-size: $font-size-small;
@@ -12,19 +12,7 @@
   }
 
   &.basic {
-    border-color: $color-grey-light2;
-  }
-
-  &.negative { border-color: $color-negative; background: $color-negative; }
-  &.positive { border-color: $color-positive; background: $color-positive; }
-  &.main { border-color: $color-main; background: $color-main; }
-  &.grey { border-color: $color-grey; background: $color-grey; }
-  &.grey-dark { border-color: $color-grey-dark; background: $color-grey-dark; }
-  &.grey-dark2 { border-color: $color-grey-dark2; background: $color-grey-dark2; }
-  &.gold { border-color: $color-gold; background: $color-gold; }
-
-  &.negative, &.positive, &.main, &.grey, &.grey-dark, &.grey-dark2, &.gold {
-    color: white;
+    //border-color: $color-grey-light2;
   }
 
   & + .united-message {

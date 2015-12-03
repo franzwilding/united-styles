@@ -1,5 +1,5 @@
 
-.united-container {
+#{$u-prefix}.container {
   padding: 0 20px;
   display: block;
   position: relative;
@@ -15,7 +15,7 @@
   }
 }
 
-.united-row {
+#{$u-prefix}.row {
   @include row();
 
   @for $i from 1 through 12 {

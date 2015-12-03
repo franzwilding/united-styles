@@ -7,9 +7,9 @@
 pre {
     @extend %box;
     word-wrap: break-word;
-    border-width: 2px;
     font-size: $font-size-small;
     margin-top: 0;
+    padding: 0 10px;
 }
 
 pre, code {
@@ -17,12 +17,12 @@ pre, code {
 }
 
 pre .comment {
-    color: $color-grey;
+    color: map-get($colors, 'grey');
     font-style: italic;
 }
 
 pre .constant {
-    color: $color-grey-dark2;
+    color: map-get($colors, 'grey-dark2');
   font-weight: bold;
 }
 
@@ -31,7 +31,7 @@ pre .storage {
 }
 
 pre .string {
-    color: darken($color-negative, 20%);
+    color: darken(map-get($colors, 'red'), 20%);
 }
 
 pre .keyword, pre .selector {

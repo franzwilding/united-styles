@@ -1,5 +1,5 @@
 
-.united-item {
+#{$u-prefix}.item {
 
   margin-top: 40px;
 
@@ -7,7 +7,7 @@
     margin-top: 0;
   }
 
-  > .united-buttons {
+  > #{$u-prefix}.buttons {
     margin-bottom: 15px;
     text-align: center;
   }
@@ -26,11 +26,11 @@
   }
 }
 
-.united-item-meta {
+#{$u-prefix}.item-meta {
   @extend %font-alt;
   font-size: $font-size-mini;
-  border-top: 1px solid $color-grey-light;
-  border-bottom: 1px solid $color-grey-light;
+  border-top: 1px solid rgba(0,0,0,0.11);
+  border-bottom: 1px solid rgba(0,0,0,0.11);
   padding: 5px 3px;
 
   > * {

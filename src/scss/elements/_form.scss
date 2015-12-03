@@ -1,84 +1,128 @@
 
-.united-label {
+#{$u-prefix}.label {
   @extend %font-alt;
 }
 
-.united-field {
+#{$u-prefix}.field {
   position: relative;
   margin: 20px 0;
 
-  label, .united-label {
+  > #{$u-prefix}.field {
+    margin: 0;
+  }
+
+  label, #{$u-prefix}.label {
     display: block;
   }
 
   &.inline {
     @include display(flex);
 
-    label, .united-label {
+    label, #{$u-prefix}.label {
       display: inline-block;
       line-height: $line-height-big * 1.5;
-      padding-right: 10px;
+      padding: 0 10px;
       vertical-align: middle;
       min-width: 100px;
     }
 
-    > input, > .united-input, > .united-input-group {
+    &.labeled, &.overlayed {
+      > label, > #{$u-prefix}.label {
+        min-width: 0;
+        background: rgba(0,0,0,0.04);
+        border: 1px solid map-get($colors, 'grey-light');
+        border-right-width: 0;
+      }
+
+      > input + label, > input + #{$u-prefix}.label {
+        border-left-width: 0;
+        border-right-width: 1px;
+      }
+    }
+
+    &.overlayed {
+      > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), > textarea {
+        border-right-width: 0;
+      }
+      > label, > #{$u-prefix}.label {
+        background: none;
+        border-left-width: 1px;
+        border-right-width: 0;
+
+        + input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), + textarea {
+          border-right-width: 1px;
+          border-left-width: 0;
+        }
+      }
+
+      > input + label, > input + #{$u-prefix}.label {
+        border-left-width: 0;
+        border-right-width: 1px;
+      }
+    }
+
+    > input, > #{$u-prefix}.input, > #{$u-prefix}.input-group {
       @include flex(1);
     }
   }
 
-  .united-input-group {
+  &.radio, &.checkbox {
+    overflow: hidde;
+    input {
+      position: absolute;
+      visibility: hidden;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 1px;
+      margin: 0;
+      min-width: 0;
+      padding: 0;
 
-    margin: 5px 0;
-
-    .united-input {
-      label, label.basic, .united-label, .united-label.basic, input {
-        line-height: $line-height-big;
+      &[type="radio"] + label:before {
+        border-radius: 20px;
       }
 
-      input[type="radio"], input[type="checkbox"] {
-        height: 14px;
-        font-size: $font-size;
-        margin: 6px 0;
+      &[type="radio"]:checked + label:before {
+        box-shadow: inset 0 0 0 4px map-get($colors, 'white');
+      }
+
+      &[type="checkbox"]:checked + label:before {
+        box-shadow: inset 0 0 0 3px map-get($colors, 'white');
+      }
+    }
+    label {
+      padding-left: 25px;
+      line-height: $size;
+
+      &:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        left: 0;
+        margin-top: -8px;
+        position: absolute;
+        @include transition(box-shadow 0.1s ease-out);
+        box-shadow: inset 0 0 0 10px map-get($colors, 'white');
+        border: 1px solid map-get($colors, 'grey-light');
+        background: map-get($colors, $color-main);
       }
     }
   }
 
-  & + .united-message {
+  & + #{$u-prefix}.message {
     margin-top: -15px;
   }
 
-  .united-input {
-    @include display(flex);
+  > .group {
+    > #{$u-prefix}.field {
+      &:first-child { margin-top: 0; }
+      &:last-child { margin-bottom: 0; }
 
-    label, .united-label {
-      padding: 0 10px;
-      display: inline-block;
-      line-height: $line-height-big * 1.4;
-      min-width: 0;
-      background: $color-grey-light2;
-      border: 1px solid $color-grey-light;
-
-      & + input {
-        border-left: 0;
+      &.radio, &.checkbox {
+        margin: 0;
       }
-
-      &.basic {
-        background: none;
-        border: none;
-        line-height: $line-height-big * 1.5;
-        padding-left: 0;
-      }
-    }
-
-    input {
-      & + label, .united-label {
-        border-left: 0;
-      }
-    }
-
-    > input {
-      @include flex(1);
     }
   }
 }

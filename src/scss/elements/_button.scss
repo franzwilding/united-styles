@@ -1,34 +1,26 @@
 
-.united-button {
+#{$u-prefix}.button {
   @extend %button;
 }
 
-.united-buttons {
+#{$u-prefix}.buttons {
   > * {
     margin: 5px;
 
     &.small, &.mini {
       margin: 2px;
-    }
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
+      border-width: 1px;
     }
   }
 
-  &.centered {
-    text-align: center;
+  &.no-padding {
+    > * {
+      &:first-child, &:first-child.small, &:first-child.mini { margin-left: 0; }
+      &:last-child, &:last-child.small, &:last-child.mini { margin-right: 0; }
+    }
   }
 
-  &.left {
-    text-align: left;
-  }
-
-  &.right {
-    text-align: right;
+  &.no-wrap {
+    white-space: nowrap;
   }
 }

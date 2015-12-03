@@ -1,24 +1,58 @@
 
-button, input[type="submit"], input[type="button"] {
+button, input, select, textarea, a {
+  &:focus {
+    outline: none;
+  }
+}
+
+button, input[type="submit"], input[type="button"], input[type="reset"] {
   @extend %button;
 }
 
-input[type="text"], [type="email"], [type="phone"], [type="number"], [type="password"], textarea {
-  border: 1px solid $color-grey-light;
+input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]), textarea {
+  border: 1px solid map-get($colors, 'grey-light');
+  color: map-get($colors, $color-main);
+  background: map-get($colors, 'white');
+  @include colors(false, true, false);
+  @include colors(false, false, true, 'background-');
   line-height: $line-height-big;
-  font-size: $font-size-big;
-  padding: 1px 10px 2px;
-  color: $color-grey-dark2;
+  font-size: $font-size;
+  padding: 1px 10px;
   display: block;
   width: 100%;
+  @include box-sizing(border-box);
   -webkit-appearance: none;
   -webkit-border-radius:0;
   border-radius:0;
+
+  &[type="color"] {
+    padding-left: 3px;
+    padding-right: 3px;
+    height: $size;
+  }
+
+  &[type="file"] {
+    line-height: 100%;
+    padding-top: ($size - 20)/2;
+    padding-bottom: ($size - 20)/2;
+  }
+
+  &[type="range"] {
+    padding-left: 0;
+    padding-right: 0;
+    height: $size;
+    -webkit-appearance: slider-horizontal;
+  }
 }
 
-input[type="checkbox"], [type="radio"] {
-  height: 40px;
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  min-width: auto;
+  line-height: 100%;
+  margin-top: ($size - 13)/2;
+  margin-bottom: ($size - 13)/2;
 }
+
 
 label {
   @extend %font-alt;

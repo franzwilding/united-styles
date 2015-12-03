@@ -7,36 +7,36 @@ body {
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
-  color: $color-grey-dark;
   padding: 0;
+  color: map-get($colors, $color-default);
 }
 
 p {
-  margin-top: 0;
+  margin: $font-size 0;
 }
 
 a {
-  color: $color-grey-dark2;
   text-decoration: underline;
+  color: map-get($colors, $color-main);
 }
 
-h4 {
-  @extend %font-alt;
-  font-size: $font-size;
-  margin: 10px 0 0 0;
+h1, h2, h3, h4, h5, h6 {
+  color: map-get($colors, $color-main);
+  margin: 20px 0 5px;
+  @include colors(true, false, false);
+  line-height: $line-height-small;
 }
 
-h5 {
-  @extend %font-alt;
-  font-size: $font-size-small;
-  margin: 10px 0 0 0;
+h5, h6 {
+  text-transform: uppercase;
 }
 
-h6 {
-  @extend %font-alt;
-  font-size: $font-size-mini;
-  margin: 10px 0 0 0;
-}
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
 
 ul, ol {
   margin-top: 0;
