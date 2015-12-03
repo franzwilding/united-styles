@@ -5,20 +5,41 @@ title: Start
 <html lang="en">
 {% include head.html %}
 <body>
-{% include menu.html %}
+{% include menu.html init="closed" %}
 <div>
-  <a class="united-sidebar-toggler fixed top right" style="margin: 11px 6px;" href="#"><span>Toggle menu</span></a>
-  <section class="united-container">
-    <div class="united-br"></div>
-    <div class="united-br"></div>
-    <h1>{{ site.title }} {{ site.version }}</h1>
-    <div class="united-hr"></div>
+  <a class="sidebar-toggler fixed top right" style="margin: 11px 6px;" href="#"><span>Toggle menu</span></a>
+  <section class="centered container">
 
-    <p>United Styles is a minimalistic css (and soon js) framework for web and mobile apps.</p>
+    <div class="br"></div>
+    <div class="br"></div>
+    <div class="br"></div>
+    <div class="br"></div>
+    <svg width="92px" height="100px" viewBox="0 0 92 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="128.554688%" id="path-red-gradient">
+          <stop stop-color="#D9304F" offset="0%"></stop>
+          <stop stop-color="#F2786D" offset="100%"></stop>
+        </radialGradient>
+      </defs>
+        <path fill="url(#path-red-gradient)" d="M0,0 L21.9056373,0 L21.9056373,58.3053691 C21.9056373,64.9049547 23.9276759,70.2740285 27.9718137,74.4127517 C32.0159516,78.5514748 37.5765578,80.6208054 44.653799,80.6208054 C52.573569,80.6208054 58.7379784,78.5934207 63.147212,74.5385906 C67.5564457,70.4837605 69.7610294,64.9329211 69.7610294,57.885906 L69.7610294,0 L91.6666667,0 L91.6666667,59.5637584 C91.6666667,72.2036426 87.4119604,82.1028725 78.9024203,89.261745 C70.3928802,96.4206174 59.032955,100 44.8223039,100 C30.4993156,100 19.448313,96.5045092 11.6689645,89.5134228 C3.88961592,82.5223364 0,72.5112508 0,59.4798658 L0,0 Z"></path>
+    </svg>
+    <h1>{{ site.title }}</h1>
+
+    <div class="br"></div>
+    <div class="br"></div>
+    <div class="br"></div>
+    <div class="buttons">
+      <a class="big open-sidebar rounded borderless full red-gradient button">Documentation</a>
+      <a class="big rounded icon-left button" href="https://github.com/franzwilding/united-styles"><i class="icon ion-social-github"></i> Github</a>
+    </div>
+    <h6>Buildtime: {{ site.time | date: '%d. %B %Y' }} | Version: {{ site.version }}</h6>
+
+
+    <!--p>United Styles is a minimalistic css (and soon js) framework for web and mobile apps.</p>
 
     <p>
-      <a class="united-button icon-left grey-dark2 " href="https://github.com/franzwilding/united-styles"><i class="icon ion-social-github"></i> Github</a>
-    </p>
+      <a class="button icon-left grey-dark2 " href="https://github.com/franzwilding/united-styles"><i class="icon ion-social-github"></i> Github</a>
+    </p-->
 
   </section>
 </div>

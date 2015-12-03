@@ -1,12 +1,24 @@
-<aside class="united-sidebar fixed left">
-  <nav>
-    <div class="united-buttons centered">
-      <a class="united-button main icon-left small" href="{{ site.baseurl }}/"><i class="icon ion-ios-home"></i> {{ site.title}} {{ site.version }}</a>
-      <a class="united-button grey-dark2 auto-width small" href="https://github.com/franzwilding/united-styles"><i class="icon ion-social-github"></i></a>
+<aside class="sidebar fixed left {{ include.init }}">
+  <nav class="centered">
+    <svg width="92px" height="70px" viewBox="0 0 92 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="128.554688%" id="path-red-gradient">
+          <stop stop-color="#D9304F" offset="0%"></stop>
+          <stop stop-color="#F2786D" offset="100%"></stop>
+        </radialGradient>
+      </defs>
+        <path fill="url(#path-red-gradient)" d="M0,0 L21.9056373,0 L21.9056373,58.3053691 C21.9056373,64.9049547 23.9276759,70.2740285 27.9718137,74.4127517 C32.0159516,78.5514748 37.5765578,80.6208054 44.653799,80.6208054 C52.573569,80.6208054 58.7379784,78.5934207 63.147212,74.5385906 C67.5564457,70.4837605 69.7610294,64.9329211 69.7610294,57.885906 L69.7610294,0 L91.6666667,0 L91.6666667,59.5637584 C91.6666667,72.2036426 87.4119604,82.1028725 78.9024203,89.261745 C70.3928802,96.4206174 59.032955,100 44.8223039,100 C30.4993156,100 19.448313,96.5045092 11.6689645,89.5134228 C3.88961592,82.5223364 0,72.5112508 0,59.4798658 L0,0 Z"></path>
+    </svg>
+    <h4>{{ site.title }} <sup>{{ site.version }}</sup></h4>
+    <div class="br"></div>
+    <div class="buttons">
+      <a class="mini rounded button" href="{{ site.baseurl }}/">Start</a>
+      <a class="mini rounded icon-left button" href="https://github.com/franzwilding/united-styles"><i class="icon ion-social-github"></i> Github</a>
     </div>
-    <div class="united-hr"></div>
+
+    <div class="hr"></div>
     <h5>Elements</h5>
-    <ol class="united-navigation icon-left">
+    <ol class="navigation icon-left">
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'elements' %}
@@ -16,7 +28,7 @@
     </ol>
 
     <h5>Global Modules</h5>
-    <ol class="united-navigation">
+    <ol class="navigation">
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'global' %}

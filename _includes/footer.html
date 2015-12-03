@@ -4,9 +4,13 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('.united-sidebar-toggler').click(function(){
-      $('.united-sidebar').toggleClass('open');
+    $('.sidebar-toggler').click(function(){
+      $('.sidebar').toggleClass('open');
       $(this).toggleClass('closed');
+    });
+    $('.open-sidebar').click(function(){
+      $('.sidebar').removeClass('closed');
+      $('.sidebar').addClass('open');
     });
   });
 </script>

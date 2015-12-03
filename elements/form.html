@@ -2,430 +2,297 @@
 title: Form
 layout: page
 ---
-<h4>Basic form fields</h4>
-<div class="united-row">
-  <pre class="width-6"><code data-language="html">
+<h4>Plain input form fields</h4>
+<div class="br"></div>
 <form>
-  <label>Label</label>
-  <input type="text" />
-  <label>Label</label>
-  <input type="text" />
-  <input type="submit" />
-</form>
-  </code></pre>
-  <div class="width-6">
-    <form>
-      <label>Label</label>
-      <input type="text" />
-      <label>Label</label>
-      <input type="text" />
-      <input type="submit" />
-    </form>
+  <div class="row">
+    <div class="field width-3">
+      <label for="input-1">Text Input</label>
+      <input id="input-1" type="text" />
+    </div>
+    <div class="field width-3">
+      <label for="input-2">Button Input</label>
+      <input id="input-2" type="button" />
+    </div>
+    <div class="field width-3">
+      <label for="input-3">Checkbox Input</label>
+      <input id="input-3" type="checkbox" />
+    </div>
+    <div class="field width-3">
+      <label for="input-4">Color Input</label>
+      <input id="input-4" type="color" />
+    </div>
   </div>
-</div>
+  <div class="row">
+    <div class="field width-3">
+      <label for="input-5">Date Input</label>
+      <input id="input-5" type="date" />
+    </div>
+    <div class="field width-3">
+      <label for="input-6">Datetime Input</label>
+      <input id="input-6" type="datetime" />
+    </div>
+    <div class="field width-3">
+      <label for="input-7">Datetime-Local Input</label>
+      <input id="input-7" type="datetime-local" />
+    </div>
+    <div class="field width-3">
+      <label for="input-8">Email Input</label>
+      <input id="input-8" type="email" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="field width-3">
+      <label for="input-9">File Input</label>
+      <input id="input-9" type="file" />
+    </div>
+    <div class="field width-3">
+      <label for="input-12">Month Input</label>
+      <input id="input-12" type="month" />
+    </div>
+    <div class="field width-3">
+      <label for="input-13">Number Input</label>
+      <input id="input-13" type="number" />
+    </div>
+    <div class="field width-3">
+      <label for="input-14">Password Input</label>
+      <input id="input-14" type="password" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="field width-3">
+      <label for="input-15">radio Input</label>
+      <input id="input-15" type="radio" />
+    </div>
+    <div class="field width-3">
+      <label for="input-16">range Input</label>
+      <input id="input-16" type="range" />
+    </div>
+    <div class="field width-3">
+      <label for="input-17">reset Input</label>
+      <input id="input-17" type="reset" />
+    </div>
+    <div class="field width-3">
+      <label for="input-18">search Input</label>
+      <input id="input-18" type="search" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="field width-3">
+      <label for="input-19">submit Input</label>
+      <input id="input-19" type="submit" />
+    </div>
+    <div class="field width-3">
+      <label for="input-20">tel Input</label>
+      <input id="input-20" type="tel" />
+    </div>
+    <div class="field width-3">
+      <label for="input-21">text Input</label>
+      <input id="input-21" type="text" />
+    </div>
+    <div class="field width-3">
+      <label for="input-22">time Input</label>
+      <input id="input-22" type="time" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="field width-3">
+      <label for="input-23">url Input</label>
+      <input id="input-23" type="url" />
+    </div>
+    <div class="field width-3">
+      <label for="input-24">week Input</label>
+      <input id="input-24" type="week" />
+    </div>
+    <div class="field width-6">
+      <label for="input-25">week Input</label>
+      <textarea id="input-25"></textarea>
+    </div>
+  </div>
+</form>
 
-<h4>United form fields</h4>
-<div class="united-row">
-  <pre class="width-6"><code data-language="html">
+
+
+<div class="br"></div>
+
+
+<div class="hr"></div><div class="br"></div>
+<h4>Special input form fields</h4>
+
 <form>
-  <div class="united-field">
-    <label>Label</label>
-    <input type="text" />
+  <div class="row">
+    <div class="width-4">
+      <div class="inline field">
+        <label for="input-26">Label</label>
+        <input id="input-26" type="text" />
+      </div>
+    </div>
+    <div class="width-4">
+      <div class="radio field">
+        <input id="input-27" type="radio" />
+        <label for="input-27">Label</label>
+      </div>
+    </div>
+    <div class="width-4">
+      <div class="checkbox field">
+        <input id="input-28" type="checkbox" />
+        <label for="input-28">Label</label>
+      </div>
+    </div>
   </div>
-  <div class="united-field">
-    <label>Label</label>
-    <input type="text" />
-  </div>
-  <div class="united-field">
-    <label>Checkbox</label>
-    <input type="checkbox" />
-  </div>
-  <div class="united-field">
-    <label>Radio</label>
-    <input type="radio" />
-  </div>
-  <div class="united-field">
-    <label>Textarea</label>
-    <textarea></textarea>
-  </div>
-  <input type="submit" />
 </form>
-  </code></pre>
-  <div class="width-6">
-    <form>
-      <div class="united-field">
-        <label>Label</label>
-        <input type="text" />
-      </div>
-      <div class="united-field">
-        <label>Label</label>
-        <input type="text" />
-      </div>
-      <div class="united-field">
-        <label>Checkbox</label>
-        <input type="checkbox" />
-      </div>
-      <div class="united-field">
-        <label>Radio</label>
-        <input type="radio" />
-      </div>
-      <div class="united-field">
-        <label>Textarea</label>
-        <textarea></textarea>
-      </div>
-      <input type="submit" />
-    </form>
-  </div>
-</div>
 
 
-<h4>Inline labels</h4>
-<p>Inline labels using CSS3 flex display to set the input's width dynamicly. No javascript required.
-<div class="united-row">
-  <pre class="width-6"><code data-language="html">
+<div class="br"></div>
+
+
+<div class="hr"></div><div class="br"></div>
+<h4>Field Groups</h4>
 <form>
-  <div class="united-field inline">
-    <label>Label</label>
-    <input type="text" />
+  <div class="row">
+    <div class="width-6">
+      <div class="inline field">
+        <label>Checkbox Group</label>
+        <div class="group">
+          <div class="checkbox field">
+            <input id="input-29" type="checkbox" />
+            <label for="input-29">Label 1</label>
+          </div>
+          <div class="checkbox field">
+            <input id="input-30" type="checkbox" />
+            <label for="input-30">Label 2</label>
+          </div>
+          <div class="checkbox field">
+            <input id="input-31" type="checkbox" />
+            <label for="input-31">Label 3</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-6">
+      <div class="inline field">
+        <label>Radio Group</label>
+        <div class="group">
+          <div class="radio field">
+            <input id="input-32" name="radio1" type="radio" />
+            <label for="input-32">Label 1</label>
+          </div>
+          <div class="radio field">
+            <input id="input-33" name="radio1" type="radio" />
+            <label for="input-33">Label 2</label>
+          </div>
+          <div class="radio field">
+            <input id="input-34" name="radio1" type="radio" />
+            <label for="input-34">Label 3</label>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="united-field inline">
-    <label>Other label</label>
-    <input type="text" />
+  <div class="row">
+    <div class="width-6">
+      <div class="inline field">
+        <label>Input Group</label>
+        <div class="group">
+          <div class="inline field">
+            <label for="input-35">Label 1</label>
+            <input id="input-35" type="text" />
+          </div>
+          <div class="inline field">
+            <label for="input-36">Label 2</label>
+            <input id="input-36" type="text" />
+          </div>
+          <div class="inline field">
+            <label for="input-37">Label 3</label>
+            <input id="input-37" type="text" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="united-field inline">
-    <label>Super duper long label</label>
-    <input type="text" />
-  </div>
-  <input class="gold" type="submit" />
 </form>
-  </code></pre>
-  <div class="width-6">
-    <form>
-      <div class="united-field inline">
-        <label>Label</label>
-        <input type="text" />
-      </div>
-      <div class="united-field inline">
-        <label>Other label</label>
-        <input type="text" />
-      </div>
-      <div class="united-field inline">
-        <label>Super duper long label</label>
-        <input type="text" />
-      </div>
-      <div class="united-buttons right">
-        <input class="gold" type="submit" />
-      </div>
-    </form>
-  </div>
-</div>
 
 
+<div class="br"></div>
 
-<h4>Input types</h4>
-<div class="united-row">
-  <pre class="width-6"><code data-language="html">
+
+<div class="hr"></div><div class="br"></div>
+<h4>Prefix & Suffix</h4>
 <form>
-  <div class="united-field inline">
-    <label>Text</label>
-    <input type="text" />
+  <div class="row">
+    <div class="width-4">
+      <div class="labeled inline field">
+        <label for="input-48">Prefix: </label>
+        <input type="text" id="input-48" />
+      </div>
+    </div>
+    <div class="width-4">
+      <div class="labeled inline field">
+        <input type="text" id="input-49" />
+        <label for="input-49">Postfix</label>
+      </div>
+    </div>
+    <div class="width-4">
+      <div class="inline field">
+        <label for="input-50">Label</label>
+        <div class="labeled inline field">
+          <label for="input-50">Postfix</label>
+          <input type="text" id="input-50" />
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="united-field inline">
-    <label>Email</label>
-    <input type="email" />
+  <div class="row">
+    <div class="width-4">
+      <div class="field">
+        <label for="input-51">Labeled</label>
+        <div class="labeled inline field">
+          <label for="input-51">Prefix</label>
+          <input type="text" id="input-51" />
+        </div>
+      </div>
+    </div>
+    <div class="width-4">
+      <div class="field">
+        <label for="input-52">Overlayed</label>
+        <div class="overlayed inline field">
+          <input type="text" id="input-52" />
+          <label for="input-52">Postfix</label>
+        </div>
+      </div>
+    </div>
+    <div class="width-4">
+      <div class="field">
+        <label for="input-53">Overlayed</label>
+        <div class="overlayed inline field">
+          <label for="input-53">Postfix</label>
+          <input type="text" id="input-53" />
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="united-field inline">
-    <label>Phone</label>
-    <input type="phone" />
+  <div class="row">
+    <div class="width-4">
+      <div class="field">
+        <label for="input-54">Overlayed</label>
+        <div class="overlayed inline field">
+          <input type="text" id="input-54" />
+          <label for="input-54"><i class="icon ion-ios-search-strong"></i></label>
+        </div>
+      </div>
+    </div>
+    <div class="width-4">
+      <div class="field">
+        <label for="input-55">Overlayed</label>
+        <div class="overlayed inline field">
+          <input type="text" id="input-55" />
+          <label for="input-55">
+            <button class="borderless square-width">
+              <i class="icon ion-ios-search-strong"></i>
+            </button>
+          </label>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="united-field inline">
-    <label>Number</label>
-    <input type="number" />
-  </div>
-  <div class="united-field inline">
-    <label>Checkbox</label>
-    <input type="checkbox" />
-  </div>
-  <div class="united-field inline">
-    <label>Radio</label>
-    <input type="radio" />
-  </div>
-  <div class="united-field inline">
-    <label>Textarea</label>
-    <textarea></textarea>
-  </div>
-  <input type="submit" />
 </form>
-  </code></pre>
-  <div class="width-6">
-    <form>
-      <div class="united-field inline">
-        <label>Text</label>
-        <input type="text" />
-      </div>
-      <div class="united-field inline">
-        <label>Email</label>
-        <input type="email" />
-      </div>
-      <div class="united-field inline">
-        <label>Phone</label>
-        <input type="phone" />
-      </div>
-      <div class="united-field inline">
-        <label>Number</label>
-        <input type="number" />
-      </div>
-      <div class="united-field inline">
-        <label>Checkbox</label>
-        <input type="checkbox" />
-      </div>
-      <div class="united-field inline">
-        <label>Radio</label>
-        <input type="radio" />
-      </div>
-      <div class="united-field inline">
-        <label>Textarea</label>
-        <textarea></textarea>
-      </div>
-      <input type="submit" />
-    </form>
-  </div>
-</div>
-
-
-
-<h4>Field messages</h4>
-<div class="united-row">
-  <pre class="width-6"><code data-language="html">
-<div class="united-field inline-label">
-  <label>Text</label>
-  <input type="text" />
-</div>
-<p class="united-message">This is just a field message</p>
-
-<div class="united-field">
-  <label>Text</label>
-  <input type="text" />
-</div>
-<p class="united-message warning">This is just a field message</p>
-  </code></pre>
-  <div class="width-6">
-    <div class="united-field inline-label">
-      <label>Text</label>
-      <input type="text" />
-    </div>
-    <p class="united-message small basic">This is just a field message</p>
-
-    <div class="united-field">
-      <label>Text</label>
-      <input type="text" />
-    </div>
-    <p class="united-message small negative"><i class="icon ion-alert-circled"></i> This is just a field message</p>
-    <p class="united-message small gold">This is just a field message</p>
-  </div>
-</div>
-
-<h4>Input label</h4>
-<div class="united-row">
-  <pre class="width-6"><code data-language="html">
-<div class="united-field">
-  <div class="united-input">
-    <label>Left label</label>
-    <input type="text" />
-  </div>
-</div>
-<div class="united-field">
-  <div class="united-input">
-    <input type="text" />
-    <label>Left label</label>
-  </div>
-</div>
-  </code></pre>
-  <div class="width-6">
-    <div class="united-field">
-      <div class="united-input">
-        <label>Right label</label>
-        <input type="text" />
-      </div>
-    </div>
-    <div class="united-field">
-      <div class="united-input">
-        <input type="text" />
-        <label>Right label</label>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="united-row">
-  <pre class="width-6"><code data-language="html">
-<div class="united-field inline">
-  <div class="united-label">Label</div>
-  <div class="united-input">
-    <label>Left label</label>
-    <input type="text" />
-  </div>
-</div>
-  </code></pre>
-  <div class="width-6">
-    <div class="united-field inline">
-      <div class="united-label">Label</div>
-      <div class="united-input">
-        <label>Left label</label>
-        <input type="text" />
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="united-row">
-  <pre class="width-6"><code data-language="html">
-<div class="united-field inline">
-  <div class="united-label">Checkbox group</div>
-  <div class="united-input">
-    <label class="basic">Check 1</label>
-    <input type="checkbox" />
-  </div>
-  <div class="united-input">
-    <label class="basic">Check 2</label>
-    <input type="checkbox" />
-  </div>
-  <div class="united-input">
-    <label class="basic">Check 3</label>
-    <input type="checkbox" />
-  </div>
-</div>
-  </code></pre>
-  <div class="width-6">
-    <div class="united-field inline">
-      <div class="united-label">Checkbox group</div>
-      <div class="united-input">
-        <label class="basic">Check 1</label>
-        <input type="checkbox" />
-      </div>
-      <div class="united-input">
-        <label class="basic">Check 2</label>
-        <input type="checkbox" />
-      </div>
-      <div class="united-input">
-        <label class="basic">Check 3</label>
-        <input type="checkbox" />
-      </div>
-    </div>
-    <div class="united-field inline">
-      <div class="united-label">Radio group</div>
-      <div class="united-input">
-        <label class="basic">Radio 1</label>
-        <input type="radio" />
-      </div>
-      <div class="united-input">
-        <label class="basic">Radio 2</label>
-        <input type="radio" />
-      </div>
-      <div class="united-input">
-        <label class="basic">Radio 3</label>
-        <input type="radio" />
-      </div>
-    </div>
-
-    <div class="united-field inline">
-      <div class="united-label">Radio group</div>
-      <div class="united-input-group">
-        <div class="united-input">
-          <label class="basic">Radio 1</label>
-          <input type="radio" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Radio 2</label>
-          <input type="radio" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Radio 3</label>
-          <input type="radio" />
-        </div>
-      </div>
-    </div>
-
-    <div class="united-field inline">
-      <div class="united-label">Checkbox group</div>
-      <div class="united-input-group">
-        <div class="united-input">
-          <label class="basic">Check 1</label>
-          <input type="checkbox" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Check 2</label>
-          <input type="checkbox" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Check 3</label>
-          <input type="checkbox" />
-        </div>
-      </div>
-    </div>
-
-    <div class="united-field">
-      <div class="united-label">Checkbox group</div>
-      <div class="united-input-group">
-        <div class="united-input">
-          <label class="basic">Check 1</label>
-          <input type="checkbox" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Check 2</label>
-          <input type="checkbox" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Check 3</label>
-          <input type="checkbox" />
-        </div>
-      </div>
-    </div>
-
-    <div class="united-field inline">
-      <div class="united-input-group">
-        <div class="united-input">
-          <label class="basic">Check 1</label>
-          <input type="checkbox" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Check 2</label>
-          <input type="checkbox" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Check 3</label>
-          <input type="checkbox" />
-        </div>
-      </div>
-
-      <div class="united-input-group">
-        <div class="united-input">
-          <label class="basic">Check 1</label>
-          <input type="checkbox" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Check 2</label>
-          <input type="checkbox" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Check 3</label>
-          <input type="checkbox" />
-        </div>
-      </div>
-
-      <div class="united-input-group">
-        <div class="united-input">
-          <label class="basic">Check 1</label>
-          <input type="checkbox" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Check 2</label>
-          <input type="checkbox" />
-        </div>
-        <div class="united-input">
-          <label class="basic">Check 3</label>
-          <input type="checkbox" />
-        </div>
-      </div>
-    </div>
-</div>
