@@ -17,22 +17,22 @@
     </div>
 
     <div class="hr"></div>
-    <h5>Elements</h5>
-    <ol class="navigation icon-left">
+    <h5 class="left">Elements</h5>
+    <ol class="list">
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'elements' %}
-          <li><a{% if p.url == page.url %} class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-android-star-outline"></i> {{ p.title }}</a></li>
+          <li><a class="item{% if p.url == page.url %} blue{% endif %}" href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-ios-circle-{% if p.url == page.url %}filled{% else %}outline{% endif %}"></i> {{ p.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ol>
 
-    <h5>Global Modules</h5>
-    <ol class="navigation">
+    <h5 class="left">Global Modules</h5>
+    <ol class="list">
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'global' %}
-          <li><a{% if p.url == page.url %} class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-grid"></i> {{ p.title }}</a></li>
+          <li><a class="item{% if p.url == page.url %} blue{% endif %}" href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-ios-circle-{% if p.url == page.url %}filled{% else %}outline{% endif %}"></i> {{ p.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ol>

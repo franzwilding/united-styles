@@ -245,35 +245,6 @@ layout: page
   <div class="row">
     <div class="width-4">
       <div class="field">
-        <label for="input-51">Labeled</label>
-        <div class="labeled inline field">
-          <label for="input-51">Prefix</label>
-          <input type="text" id="input-51" />
-        </div>
-      </div>
-    </div>
-    <div class="width-4">
-      <div class="field">
-        <label for="input-52">Overlayed</label>
-        <div class="overlayed inline field">
-          <input type="text" id="input-52" />
-          <label for="input-52">Postfix</label>
-        </div>
-      </div>
-    </div>
-    <div class="width-4">
-      <div class="field">
-        <label for="input-53">Overlayed</label>
-        <div class="overlayed inline field">
-          <label for="input-53">Postfix</label>
-          <input type="text" id="input-53" />
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="width-4">
-      <div class="field">
         <label for="input-54">Overlayed</label>
         <div class="overlayed inline field">
           <input type="text" id="input-54" />
@@ -283,16 +254,204 @@ layout: page
     </div>
     <div class="width-4">
       <div class="field">
-        <label for="input-55">Overlayed</label>
+        <label for="input-55">Overlayed Button</label>
         <div class="overlayed inline field">
           <input type="text" id="input-55" />
-          <label for="input-55">
-            <button class="borderless square-width">
-              <i class="icon ion-ios-search-strong"></i>
-            </button>
-          </label>
+          <button class="borderless square-width static grey">
+            <i class="icon ion-ios-search-strong"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="width-4">
+      <div class="field">
+        <label for="input-56">Overlayed Button Rounded</label>
+        <div class="overlayed inline field rounded">
+          <input type="text" id="input-56" />
+          <button class="rounded borderless square-width static grey">
+            <i class="icon ion-ios-search-strong"></i>
+          </button>
         </div>
       </div>
     </div>
   </div>
 </form>
+
+
+
+<div class="br"></div>
+
+
+<div class="hr"></div><div class="br"></div>
+<h4>Colors</h4>
+<form>
+  <div class="row">
+    <div class="width-3">
+      <div class="inline field">
+        <label for="input-57" class="green">Green</label>
+        <input type="text" id="input-57" class="green" />
+      </div>
+    </div>
+    <div class="width-3">
+      <div class="inline field">
+        <label for="input-58" class="red">Red</label>
+        <input type="text" id="input-58" placeholder="Blue" class="blue" />
+      </div>
+    </div>
+    <div class="width-3">
+      <div class="inline field">
+        <label for="input-59" class="gold">Gold</label>
+        <input type="text" id="input-59" class="background-gold gold" />
+      </div>
+    </div>
+    <div class="width-3">
+      <div class="inline field">
+        <label for="input-60" class="grey-light">Grey light</label>
+        <div class="overlayed inline field rounded">
+          <input type="text" id="input-60" class="background-grey-light" />
+          <button class="borderless static white square-width">
+            <i class="icon ion-ios-search-strong"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<div class="br"></div>
+
+
+<div class="hr"></div><div class="br"></div>
+<h4 class="centered">Real form example</h4>
+<div class="br"></div>
+<form style="width: 800px; margin: 0 auto;">
+  <div class="row">
+    <div class="width-6">
+      <div class="inline field">
+        <label for="input-61">Firstname</label>
+        <input type="text" id="input-61" placeholder="Fill in your first name" required="required" />
+      </div>
+    </div>
+    <div class="width-6">
+      <div class="inline field">
+        <label for="input-62">Lastname</label>
+        <input type="text" id="input-62" placeholder="Fill in your last name" required="required" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="width-6">
+      <div class="inline field">
+        <label for="input-62">Street</label>
+        <input type="text" id="input-62" />
+      </div>
+    </div>
+    <div class="width-3">
+      <div class="inline field">
+        <label class="auto-width" for="input-63">Number</label>
+        <input type="text" size=10 id="input-63" />
+      </div>
+    </div>
+    <div class="width-3">
+      <div class="inline field">
+        <label class="auto-width" for="input-64">ZIP</label>
+        <input type="number" id="input-64" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="inline field">
+      <label for="input-66">Username</label>
+      <input id="input-66" type="text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="inline field">
+      <label for="input-67">Website</label>
+      <div class="labeled inline field">
+        <label for="input-67">http://</label>
+        <input type="text" id="input-67" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="width-6">
+      <div class="inline field">
+        <label>Skills</label>
+        <div class="group">
+          <div class="checkbox field">
+            <input id="skills-1" type="checkbox" />
+            <label for="skills-1">HTML</label>
+          </div>
+          <div class="checkbox field">
+            <input id="skills-2" type="checkbox" />
+            <label for="skills-2">CSS</label>
+          </div>
+          <div class="checkbox field">
+            <input id="skills-3" type="checkbox" />
+            <label for="skills-3">JS</label>
+          </div>
+          <div class="checkbox field">
+            <input id="skills-4" type="checkbox" />
+            <label for="skills-4">PHP</label>
+          </div>
+          <div class="checkbox field">
+            <input id="skills-5" type="checkbox" />
+            <label for="skills-5">Ruby</label>
+          </div>
+        </div>
+        <div class="group">
+          <div class="checkbox field">
+            <input id="skills-6" type="checkbox" />
+            <label for="skills-6">Symfony</label>
+          </div>
+          <div class="checkbox field">
+            <input id="skills-7" type="checkbox" />
+            <label for="skills-7">Rails</label>
+          </div>
+          <div class="checkbox field">
+            <input id="skills-8" type="checkbox" />
+            <label for="skills-8">Sails</label>
+          </div>
+          <div class="checkbox field">
+            <input id="skills-9" type="checkbox" />
+            <label for="skills-9">Laravel</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-6">
+      <div class="inline field">
+        <label>Work experience</label>
+        <div class="group">
+          <div class="radio field">
+            <input name="experience" id="experience-1" type="radio" />
+            <label for="experience-1">0-5 years</label>
+          </div>
+          <div class="radio field">
+            <input name="experience" id="experience-2" type="radio" />
+            <label for="experience-2">5-10 years</label>
+          </div>
+          <div class="radio field">
+            <input name="experience" id="experience-3" type="radio" />
+            <label for="experience-3">> 10 years</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="inline field">
+      <label for="input-68">Message</label>
+      <textarea id="input-68" placeholder="Please introduce yourself..."></textarea>
+    </div>
+  </div>
+  <div class="right buttons no-padding">
+    <button type="submit" class="green full">Register</button>
+    <button type="reset" class="grey">Reset</button>
+  </div>
+</form>
+<div class="br"></div>
+<div class="br"></div>
+<div class="br"></div>
