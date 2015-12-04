@@ -1,0 +1,43 @@
+
+#{$u-prefix}.list {
+  padding: 5px 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  #{$u-prefix}.item {
+    text-align: left;
+    margin: 0;
+    padding: 5px 20px;
+    text-decoration: none;
+    display: block;
+    @include transition(color 0.2s ease-out);
+    position: relative;
+    @include colors(true);
+    @include colors(false, false, true, false, ".", ":before");
+
+    &:before {
+        content: "";
+        display: block;
+        opacity: 0;
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        top: 50%;
+        margin-top: -4px;
+        left: 6px;
+        border-radius: 10px;
+        @include transition(opacity 0.2s ease-out);
+        background: map-get($colors, $color-main);
+      }
+
+    &.active {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}

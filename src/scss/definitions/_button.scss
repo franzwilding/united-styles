@@ -16,7 +16,7 @@
   -webkit-border-radius:0;
   border-radius:0;
 
-  &.full, &:hover, &.active {
+  &.full, &:hover:not(.static), &.active {
     background: map-get($colors, $color-main);
     @include colors(false, true, true);
     color: white;

@@ -14,7 +14,7 @@ input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="c
   color: map-get($colors, $color-main);
   background: map-get($colors, 'white');
   @include colors(false, true, false);
-  @include colors(false, false, true, 'background-');
+  @include colors(false, false, true, false, '.background-');
   line-height: $line-height-big;
   font-size: $font-size;
   padding: 1px 10px;
@@ -22,8 +22,8 @@ input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="c
   width: 100%;
   @include box-sizing(border-box);
   -webkit-appearance: none;
-  -webkit-border-radius:0;
   border-radius:0;
+  min-height: $size;
 
   &[type="color"] {
     padding-left: 3px;
@@ -56,6 +56,7 @@ input[type="checkbox"], input[type="radio"] {
 
 label {
   @extend %font-alt;
+  @include colors(true, false, false);
 }
 
 textarea {

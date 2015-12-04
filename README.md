@@ -1,6 +1,6 @@
 #United styles
 
-United styles is a minimalistic css (and also js in the future) framework, used primary for  united cms.
+United styles is a minimalistic css framework, used primary for  united cms.
 
 ## Installation
 
@@ -16,4 +16,4 @@ When you want to use icons, you must include Ionicons css and font files
 [https://franzwilding.github.io/united-styles/](https://franzwilding.github.io/united-styles/)
 
 ## Using in production
-When you only need the final minified css (and js) files, you can just include the files in build and don't need to download all bower dependencies.
+When you only need the final minified css files, you can just include the files in build and don't need to download all bower dependencies.

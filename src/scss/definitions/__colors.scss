@@ -1,7 +1,7 @@
 
-@mixin colors($text: false, $border: false, $background: false, $white-text: false, $prefix:'') {
+@mixin colors($text: false, $border: false, $background: false, $white-text: false, $prefix:'.', $postfix:'') {
   @each $name, $color in $colors {
-    &.#{$prefix}#{$name} {
+    &#{$prefix}#{$name}#{$postfix} {
       @if($text) { color: $color; }
       @if($border) { border-color: $color; }
       @if($background) {
@@ -10,14 +10,14 @@
     }
   }
   @each $name, $gradient in map-get($gradients, 'linear') {
-    &.#{$prefix}#{$name}-gradient {
+    &#{$prefix}#{$name}-gradient#{$postfix} {
       @if($background) {
         @include linear-gradient($gradient...);
       }
     }
   }
   @each $name, $gradient in map-get($gradients, 'radial') {
-    &.#{$prefix}#{$name}-gradient {
+    &#{$prefix}#{$name}-gradient#{$postfix} {
       @if($background) {
         @include radial-gradient($gradient...);
       }
