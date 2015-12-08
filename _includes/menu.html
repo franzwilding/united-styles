@@ -13,7 +13,9 @@
     <div class="br"></div>
     <div class="buttons">
       <a class="mini rounded button" href="{{ site.baseurl }}/">Start</a>
-      <a class="mini rounded icon-left button" href="https://github.com/franzwilding/united-styles"><i class="icon ion-social-github"></i> Github</a>
+      <a class="mini rounded button" href="https://github.com/franzwilding/united-styles">
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/icons/svg.svg#github" /></svg> Github
+      </a>
     </div>
 
     <div class="hr"></div>
@@ -22,7 +24,7 @@
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'elements' %}
-          <li><a class="item{% if p.url == page.url %} blue{% endif %}" href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-ios-circle-{% if p.url == page.url %}filled{% else %}outline{% endif %}"></i> {{ p.title }}</a></li>
+          <li><a class="item{% if p.url == page.url %} active blue{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ol>
@@ -32,7 +34,7 @@
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'global' %}
-          <li><a class="item{% if p.url == page.url %} blue{% endif %}" href="{{ site.baseurl }}{{ p.url }}"><i class="icon ion-ios-circle-{% if p.url == page.url %}filled{% else %}outline{% endif %}"></i> {{ p.title }}</a></li>
+          <li><a class="item{% if p.url == page.url %} active blue{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ol>

@@ -29,7 +29,9 @@ title: Start
     <div class="br"></div>
     <div class="buttons">
       <a class="big open-sidebar rounded borderless full red-gradient button">Documentation</a>
-      <a class="big rounded icon-left button" href="https://github.com/franzwilding/united-styles"><i class="icon ion-social-github"></i> Github</a>
+      <a class="big rounded button" href="https://github.com/franzwilding/united-styles">
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/icons/svg.svg#github" /></svg> Github
+      </a>
     </div>
     <h6>Buildtime: {{ site.time | date: '%d. %B %Y' }} | Version: {{ site.version }}</h6>
 

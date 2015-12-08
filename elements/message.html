@@ -8,18 +8,32 @@ layout: page
 <div class="message red basic">This is a red basic message.</div>
 <div class="message red">This is a red message.</div>
 <div class="message green">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</div>
-<div class="message green"><i class="icon ion-information-circled"></i> <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</span></div>
-<div class="message gold"><i class="icon ion-nuclear"></i> <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr!</span></div>
-<div class="message gold"><span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr!</span><i class="icon ion-nuclear"></i></div>
-<div class="message justified red"><span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr!</span><i class="icon ion-close"></i></div>
+<div class="message green">
+  <svg class="mini icon"><use xlink:href="/united-styles/icons/svg.svg#cross" /></svg>
+  <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</span>
+</div>
+<div class="message gold">
+  <svg class="mini icon"><use xlink:href="/united-styles/icons/svg.svg#cross" /></svg>
+  <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr!</span>
+</div>
+<div class="message red">
+  <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr!</span>
+  <svg class="mini icon"><use xlink:href="/united-styles/icons/svg.svg#cross" /></svg>
+</div>
+
 <pre><code data-language="html">
   <div class="message">This is a message.</div>
   <div class="message basic">This is a basic message.</div>
   <div class="message red basic">This is a red basic message.</div>
   <div class="message red">This is a red message.</div>
-  <div class="message red"><i class="icon ion-information-circled"></i><span>This is a red message.</span></div>
-  <div class="message red"><span>This is a red message.</span><i class="icon ion-information-circled"></i></div>
-  <div class="message justified red"><span>This is a red message.</span><i class="icon ion-information-circled"></i></div>
+  <div class="message red">
+    <svg class="icon"><use xlink:href="/united-styles/icons/svg.svg#cross" /></svg>
+    <span>This is a red message.</span>
+  </div>
+  <div class="message red">
+    <span>This is a red message.</span>
+    <svg class="mini icon"><use xlink:href="/united-styles/icons/svg.svg#cross" /></svg>
+  </div>
 
 </code></pre>
 <div class="br"></div>
@@ -32,21 +46,33 @@ layout: page
       <div class="field">
         <input type="text" id="input-1" />
       </div>
-      <div class="small red message"><i class="icon ion-information-circled"></i> <span>Please fill out the form!</span></div>
+      <div class="small red message">
+        <svg class="mini icon"><use xlink:href="/united-styles/icons/svg.svg#github" /></svg>
+        <span>Please fill out the form!</span>
+      </div>
     </div>
     <div class="width-4">
       <div class="inline field">
         <label for="input-2">Label</label>
         <input type="text" id="input-2" />
       </div>
-      <div class="small green message"><i class="icon ion-checkmark"></i> <span>Username was saved!</span></div>
+      <div class="small green message">
+        <svg class="mini icon"><use xlink:href="/united-styles/icons/svg.svg#github" /></svg>
+        <span>Username was saved!</span>
+      </div>
     </div>
     <div class="width-4">
       <div class="field">
         <input type="text" id="input-2" />
       </div>
-      <div class="small red message"><i class="icon ion-information-circled"></i> <span>Please fill out the form!</span></div>
-      <div class="small red message"><i class="icon ion-information-circled"></i> <span>The username is already taken!</span></div>
+      <div class="small red message">
+        <svg class="mini icon"><use xlink:href="/united-styles/icons/svg.svg#github" /></svg>
+        <span>Please fill out the form!</span>
+      </div>
+      <div class="small red message">
+        <svg class="mini icon"><use xlink:href="/united-styles/icons/svg.svg#github" /></svg>
+        <span>The username is already taken!</span>
+      </div>
     </div>
   </div>
 </form>
