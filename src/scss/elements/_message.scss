@@ -9,13 +9,14 @@
   @include align-items(center);
   @include display(flex);
 
-  &.justified {
-    @include justify-content(space-between);
-  }
-
   > * {
+    @include flex(1);
     margin-right: 10px;
     &:last-child { margin-right: 0; }
+  }
+
+  > #{$u-prefix}.button, > #{$u-prefix}.icon {
+    @include flex(initial);
   }
 
   &.small {
