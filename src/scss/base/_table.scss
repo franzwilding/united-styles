@@ -1,0 +1,84 @@
+
+table {
+  width: 100%;
+  border-collapse: inherit;
+  margin: $font-size 0;
+
+  thead {
+    tr {
+      &:last-child {
+        td, th {
+          border-bottom: 1px solid rgba(0,0,0,0.04);
+          border-color: rgba(0,0,0,0.08);
+        }
+      }
+    }
+  }
+
+  tfoot {
+    background: rgba(0,0,0,0.02);
+    tr {
+      &:first-child {
+        td, th {
+          border-top: 1px solid rgba(0,0,0,0.04);
+          border-color: rgba(0,0,0,0.08);
+        }
+      }
+    }
+  }
+
+  tbody {
+    font-size: $font-size-small;
+    tr {
+      &:hover {
+        background: map-get($colors, $color-active);
+        color: map-get($colors, 'white');
+
+        a {
+          color: map-get($colors, 'white');
+        }
+
+        #{$u-prefix}.button:not(.full):not(:hover) {
+          border-color: map-get($colors, 'white');
+          color: map-get($colors, 'white');
+        }
+      }
+
+      &:nth-child(2n):not(:hover) {
+        background: rgba(0,0,0,0.02);
+      }
+
+      td {
+        border-right: 1px solid rgba(0,0,0,0.04);
+        border-bottom: 1px solid rgba(0,0,0,0.04);
+        vertical-align: middle;
+        line-height: 100%;
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  th, td {
+    padding: 3px 10px;
+    text-align: left;
+    @include colors(false, true, true, true);
+
+    &.no-wrap {
+      white-space: nowrap;
+    }
+  }
+
+  th {
+    @extend %font-alt;
+    padding: 5px 10px;
+    color: map-get($colors, $color-main);
+  }
+}

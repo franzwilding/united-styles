@@ -6,6 +6,9 @@
       @if($border) { border-color: $color; }
       @if($background) {
         background-color: $color;
+        @if($white-text) {
+          color: map-get($colors, 'white');
+        }
       }
     }
   }
@@ -13,6 +16,9 @@
     &#{$prefix}#{$name}-gradient#{$postfix} {
       @if($background) {
         @include linear-gradient($gradient...);
+        @if($white-text) {
+          color: map-get($colors, 'white');
+        }
       }
     }
   }
@@ -20,6 +26,9 @@
     &#{$prefix}#{$name}-gradient#{$postfix} {
       @if($background) {
         @include radial-gradient($gradient...);
+        @if($white-text) {
+          color: map-get($colors, 'white');
+        }
       }
     }
   }
