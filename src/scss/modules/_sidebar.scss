@@ -6,6 +6,7 @@
   width: 300px;
   padding: 20px;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 
   &.fixed {
     &.left {
@@ -41,12 +42,24 @@
 
     &.open {
       width: 100%;
+      & + * {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+      }
     }
   }
 
   @include media($query-medium) {
-
     &.fixed {
+      &.open + * {
+        position: static;
+        overflow: auto;
+      }
+
       &.left {
         left: 0;
         border-right-width: 2px;
@@ -125,6 +138,7 @@
   text-align: center;
   font-size: 0;
   line-height: 100%;
+  cursor: pointer;
 
   @include media($query-medium) {
     display: none;
@@ -162,7 +176,7 @@
     }
   }
 
-  &.closed {
+  &.close {
     > span {
       background: none;
 

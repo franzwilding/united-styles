@@ -15,7 +15,6 @@
 
     li {
       @include flex(1);
-
       > * {
         display: block;
         text-align: center;
