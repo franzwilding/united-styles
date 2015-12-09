@@ -1,16 +1,12 @@
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
 <script type="text/javascript">
-  $(document).ready(function(){
-    $('.sidebar-toggler').click(function(){
-      $('.sidebar').toggleClass('open');
-      $(this).toggleClass('closed');
-    });
-    $('.open-sidebar').click(function(){
-      $('.sidebar').removeClass('closed');
-      $('.sidebar').addClass('open');
-    });
-  });
+  var toggleSidebar = function(){
+    var s = document.getElementsByClassName('sidebar')[0];
+    var st = document.getElementsByClassName('sidebar-toggler')[0];
+    s.classList.toggle('open');
+    s.classList.toggle('closed');
+    st.classList.toggle('close');
+    return false;
+  };
 </script>
