@@ -4,24 +4,27 @@ table {
   border-collapse: inherit;
   margin: $font-size 0;
 
-  thead {
+  tfoot {
+    background: rgba(0,0,0,0.04);
     tr {
       &:last-child {
         td, th {
-          border-bottom: 1px solid rgba(0,0,0,0.04);
-          border-color: rgba(0,0,0,0.08);
+          border-bottom: 1px solid rgba(0,0,0,0.1);
         }
       }
     }
   }
 
-  tfoot {
-    background: rgba(0,0,0,0.02);
-    tr {
-      &:first-child {
+  &.bordered {
+    tfoot {
+      tr {
         td, th {
-          border-top: 1px solid rgba(0,0,0,0.04);
-          border-color: rgba(0,0,0,0.08);
+          &:first-child {
+              border-left: 1px solid rgba(0,0,0,0.1);
+          }
+          &:last-child {
+              border-right: 1px solid rgba(0,0,0,0.1);
+          }
         }
       }
     }
@@ -48,19 +51,14 @@ table {
         background: rgba(0,0,0,0.02);
       }
 
-      td {
-        border-right: 1px solid rgba(0,0,0,0.04);
-        border-bottom: 1px solid rgba(0,0,0,0.04);
+      td, th {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
         vertical-align: middle;
         height: $size;
-        &:last-child {
-          border-right: none;
-        }
       }
-
-      &:last-child {
-        td {
-          border-bottom: none;
+      &:first-child {
+        td, th {
+          border-top: 1px solid rgba(0,0,0,0.1);
         }
       }
     }
@@ -80,5 +78,18 @@ table {
     @extend %font-alt;
     padding: 5px 10px;
     color: map-get($colors, $color-main);
+  }
+
+  &.bordered {
+    tbody {
+      tr {
+        td {
+          border-right: 1px solid rgba(0,0,0,0.1);
+          &:first-child {
+            border-left: 1px solid rgba(0,0,0,0.1);
+          }
+        }
+      }
+    }
   }
 }
