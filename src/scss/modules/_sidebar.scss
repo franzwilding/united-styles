@@ -42,24 +42,11 @@
 
     &.open {
       width: 100%;
-      & + * {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-      }
     }
   }
 
   @include media($query-medium) {
     &.fixed {
-      &.open + * {
-        position: static;
-        overflow: auto;
-      }
-
       &.left {
         left: 0;
         border-right-width: 2px;
@@ -193,5 +180,16 @@
         @include transform(rotate(-45deg));
       }
     }
+  }
+}
+
+#{$u-prefix}.no-scrolling {
+  overflow: hidden;
+}
+
+#{$u-prefix}.no-scrolling-small {
+  overflow: hidden;
+  @include media($query-medium) {
+    overflow: initial;
   }
 }

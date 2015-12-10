@@ -52,7 +52,7 @@ table {
         border-right: 1px solid rgba(0,0,0,0.04);
         border-bottom: 1px solid rgba(0,0,0,0.04);
         vertical-align: middle;
-        line-height: 100%;
+        height: $size;
         &:last-child {
           border-right: none;
         }
