@@ -6,7 +6,7 @@
 
 #{$u-prefix}.field {
   position: relative;
-  margin: 20px 0;
+  margin: 15px 0;
 
   > #{$u-prefix}.field {
     margin: 0;
@@ -78,8 +78,33 @@
       }
     }
 
-    > input, > #{$u-prefix}.input, > #{$u-prefix}.input-group {
+    > input, > #{$u-prefix}.input, > #{$u-prefix}.input-group, > #{$u-prefix}.field {
       @include flex(1);
+    }
+  }
+
+  &.select {
+    background: map-get($colors, 'white');
+
+    select {
+      -webkit-appearance: none;
+      height: auto;
+      padding-right: 20px;
+      position: relative;
+      background: none;
+      z-index: 5;
+    }
+
+    .triangle {
+      position: absolute;
+      height: 14px;
+      width: 14px;
+      right: 10px;
+      left: auto;
+      top: 50%;
+      margin-top: -7px;
+      color: map-get($colors, 'grey');
+      z-index: 0;
     }
   }
 

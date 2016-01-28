@@ -11,6 +11,18 @@
   text-align: right;
 }
 
+#{$u-prefix}.responsive-centered {
+  text-align: center;
+
+  @include media($query-medium) {
+    text-align: left;
+
+    &.right {
+      text-align: right;
+    }
+  }
+}
+
 p#{$u-prefix}.bold {
   font-weight: bold;
 }

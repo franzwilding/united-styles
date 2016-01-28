@@ -4,11 +4,35 @@
   .filter {
     position: relative;
     min-height: 28px;
+    padding: 0 20px 20px;
 
     .filter-toggle {
       position: absolute;
       top: 0;
       right: 0;
+    }
+
+    .content {
+      height: 0;
+      overflow: hidden;
+    }
+
+    &.open {
+      @extend %box;
+      margin-bottom: 10px;
+
+      .filter-toggle {
+        top: 10px;
+        right: 10px;
+      }
+
+      .content {
+        height: auto;
+      }
+
+      form fieldset {
+        margin: 0;
+      }
     }
   }
 
