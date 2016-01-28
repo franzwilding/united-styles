@@ -11,10 +11,18 @@
   text-align: right;
 }
 
+p#{$u-prefix}.bold {
+  font-weight: bold;
+}
+
 p#{$u-prefix}.small {
   font-size: $font-size-small;
 }
 
 p#{$u-prefix}.big {
   font-size: $font-size-big;
+}
+
+p#{$u-prefix}.lead {
+  color: map-get($colors, 'grey');
 }

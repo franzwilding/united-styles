@@ -30,20 +30,50 @@
 
   &.small {
     font-size: $font-size-small;
+    line-height: $line-height-medium;
     min-width: 120px;
-    border-width: 1px;
-    padding: 0 6px;
+    padding: 0 5px;
   }
 
   &.mini {
     font-size: $font-size-mini;
+    line-height: $line-height-medium;
     min-width: 100px;
-    border-width: 1px;
-    padding: 0 5px;
+    padding: 0 4px;
   }
 
   &.rounded {
     border-radius: 30px;
+  }
+
+  &.responsive-rounded {
+    border-radius: 30px;
+    min-width: 0;
+    width: auto;
+
+    .text {
+      display: none;
+    }
+
+    @include media($query-medium) {
+      min-width: 120px;
+      border-radius: 0;
+      padding-left: 26px;
+      position: relative;
+
+      #{$u-prefix}.icon {
+        position: absolute;
+        height: 100%;
+        margin: 0;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+      }
+
+      .text {
+        display: inline;
+      }
+    }
   }
 
   &.borderless {

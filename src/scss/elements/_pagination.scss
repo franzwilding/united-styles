@@ -1,0 +1,32 @@
+
+#{$u-prefix}.pagination {
+  text-align: center;
+  margin: 20px;
+
+  a {
+    @extend %button;
+    font-size: $font-size-small;
+    line-height: 2rem;
+    min-width: 24px;
+    border-radius: 30px;
+    padding: 0 3px;
+    letter-spacing: normal;
+    color: map-get($colors, 'grey');
+    border-color: map-get($colors, 'grey');
+    margin: 0 1px;
+
+    &:hover, &:hover:not(.static) {
+      background: map-get($colors, 'grey');
+    }
+
+    &.active {
+      color: map-get($colors, 'white');
+      border-color: map-get($colors, $color-active);
+      background: map-get($colors, $color-active);
+
+      &:hover {
+        background: map-get($colors, $color-active);
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+
+#{$u-prefix}.inline-label {
+  @include colors(false, false, true, true);
+  @extend %font-alt;
+  padding: 2px 5px 1px;
+}

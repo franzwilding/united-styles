@@ -4,12 +4,14 @@
 }
 
 #{$u-prefix}.buttons {
+
+  margin-top: 1.4rem;
+
   > * {
     margin: 5px;
 
     &.small, &.mini {
       margin: 2px;
-      border-width: 1px;
     }
   }
 

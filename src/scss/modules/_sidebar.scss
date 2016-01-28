@@ -1,40 +1,95 @@
 
+$sidebar-width: 280px;
+
 #{$u-prefix}.sidebar {
   @extend %box;
   @extend %fixable;
   background: map-get($colors, 'grey-light2');
-  width: 300px;
-  padding: 20px;
+  width: $sidebar-width;
+  padding: 30px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 
+  nav {
+    padding: 0 5px;
+    margin: 20px 0;
+    text-align: center;
+
+    @include media($query-medium) {
+      text-align: left;
+    }
+
+    + nav {
+      margin-top: 40px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: map-get($colors, 'grey');
+      @extend %font-alt;
+      font-size: $font-size-mini;
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      list-style: none;
+      margin: 0 0 0 5px;
+      padding: 0;
+
+      li {
+        a {
+          padding: 5px 3px 4px;
+          display: block;
+          text-decoration: none;
+
+          .icon {
+            width: 14px;
+            height: 14px;
+            margin-right: 3px;
+          }
+
+          &:hover, &.active {
+            color: map-get($colors, $color-active);
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &.active {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
   &.fixed {
     &.left {
-      left: -300px;
+      left: -$sidebar-width;
       @include transition(left 0.15s ease-out);
       &.open { left: 0; }
     }
 
     &.right {
-      right: -300px;
+      right: -$sidebar-width;
       @include transition(right 0.15s ease-out);
       &.open { right: 0; }
     }
 
     &.top, &.bottom {
       width: 100%;
-      height: 300px;
+      height: $sidebar-width;
     }
 
     &.top {
-      top: -300px;
+      top: -$sidebar-width;
       border-bottom-width: 2px;
       @include transition(top 0.15s ease-out);
       &.open { top: 0; }
     }
 
     &.bottom {
-      bottom: -300px;
+      bottom: -$sidebar-width;
       border-top-width: 2px;
       @include transition(bottom 0.15s ease-out);
       &.open { bottom: 0; }
@@ -52,12 +107,12 @@
         border-right-width: 2px;
 
         & + * {
-          margin-left: 300px;
+          margin-left: $sidebar-width;
           @include transition(margin-left 0.15s ease-out);
         }
 
         &.closed {
-          left: -300px;
+          left: -$sidebar-width;
           & + * { margin-left: 0; }
         }
       }
@@ -67,12 +122,12 @@
         border-left-width: 2px;
 
         & + * {
-          margin-right: 300px;
+          margin-right: $sidebar-width;
           @include transition(margin-right 0.15s ease-out);
         }
 
         &.closed {
-          right: -300px;
+          right: -$sidebar-width;
           & + * { margin-right: 0; }
         }
       }
@@ -81,12 +136,12 @@
         top: 0;
 
         & + * {
-          margin-top: 300px;
+          margin-top: $sidebar-width;
           @include transition(margin-top 0.15s ease-out);
         }
 
         &.closed {
-          top: -300px;
+          top: -$sidebar-width;
           & + * { margin-top: 0; }
         }
       }
@@ -95,18 +150,18 @@
         bottom: 0;
 
         & + * {
-          margin-bottom: 300px;
+          margin-bottom: $sidebar-width;
           @include transition(margin-bottom 0.15s ease-out);
         }
 
         &.closed {
-          bottom: -300px;
+          bottom: -$sidebar-width;
           & + * { margin-bottom: 0; }
         }
       }
 
       &.open {
-        width: 300px;
+        width: $sidebar-width;
 
         &.top, &.bottom {
           width: 100%;
@@ -120,7 +175,7 @@
 
   position: relative;
   display: inline-block;
-  @extend %fixable;
+  @extend %fixable;  
   padding: 18px 15px;
   text-align: center;
   font-size: 0;
