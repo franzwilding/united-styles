@@ -1,5 +1,5 @@
 <aside class="sidebar fixed left {{ include.init }}">
-  <nav class="centered">
+  <header class="centered">
     <svg width="92px" height="70px" viewBox="0 0 92 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="128.554688%" id="path-red-gradient">
@@ -9,32 +9,41 @@
       </defs>
         <path fill="url(#path-red-gradient)" d="M0,0 L21.9056373,0 L21.9056373,58.3053691 C21.9056373,64.9049547 23.9276759,70.2740285 27.9718137,74.4127517 C32.0159516,78.5514748 37.5765578,80.6208054 44.653799,80.6208054 C52.573569,80.6208054 58.7379784,78.5934207 63.147212,74.5385906 C67.5564457,70.4837605 69.7610294,64.9329211 69.7610294,57.885906 L69.7610294,0 L91.6666667,0 L91.6666667,59.5637584 C91.6666667,72.2036426 87.4119604,82.1028725 78.9024203,89.261745 C70.3928802,96.4206174 59.032955,100 44.8223039,100 C30.4993156,100 19.448313,96.5045092 11.6689645,89.5134228 C3.88961592,82.5223364 0,72.5112508 0,59.4798658 L0,0 Z"></path>
     </svg>
-    <h4>{{ site.title }} <sup>{{ site.version }}</sup></h4>
-    <div class="br"></div>
+    <h2>{{ site.title }}</h2>
     <div class="buttons">
       <a class="mini rounded button" href="{{ site.baseurl }}/">Start</a>
       <a class="mini rounded button" href="https://github.com/franzwilding/united-styles">
-        <svg class="icon"><use xlink:href="{{ site.baseurl }}/icons/svg.svg#github" /></svg> Github
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/icons/icons.svg#github" /></svg> Github
       </a>
     </div>
+  </header>
 
-    <div class="hr"></div>
-    <h5 class="left">Elements</h5>
-    <ol class="list">
+  <div class="hr"></div>
+  <nav>
+    <h3>Elements</h3>
+    <ol>
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
         {% if pagedir[1] == 'elements' %}
-          <li><a class="item{% if p.url == page.url %} active blue{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+          <li><a class="{% if p.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">
+            {{ p.title }}
+          </a></li>
         {% endif %}
       {% endfor %}
     </ol>
+  </nav>
 
-    <h5 class="left">Global Modules</h5>
-    <ol class="list">
+  <nav>
+    <h3>Modules</h3>
+    <ol>
       {% for p in site.pages %}
         {% assign pagedir = p.url|split: '/' %}
-        {% if pagedir[1] == 'global' %}
-          <li><a class="item{% if p.url == page.url %} active blue{% endif %}" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+        {% if pagedir[1] == 'modules' %}
+          <li>
+            <a class="{% if p.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ p.url }}">
+            {% if p.icon %}<svg class="icon"><use xlink:href="{{ site.baseurl }}/icons/icons.svg#{{ p.icon }}" /></svg> {% endif %}{{ p.title }}
+            </a>
+          </li>
         {% endif %}
       {% endfor %}
     </ol>
