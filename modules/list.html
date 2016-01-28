@@ -31,9 +31,44 @@ layout: plain
 
 <section class="list-module responsive-padding container">
   <aside class="filter">
-    <a class="borderless small grey static button filter-toggle">
+    <a class="borderless small grey static button filter-toggle" onclick="toggleFilter();">
       <svg class="icon"><use xlink:href="/united-styles/icons/icons.svg#filter" /></svg> Filter / Order
     </a>
+    <form class="content">
+      <fieldset>
+        <legend>Filter / Order</legend>
+        <div class="row">
+          <div class="width-4">
+            <div class="inline field">
+              <input type="text" id="input-61" placeholder="Filter by name" required="required" />
+            </div>
+          </div>
+          <div class="width-4">
+            <div class="inline select field">
+              <select>
+                <option>Display all stati</option>
+                <option>Only active</option>
+                <option>Only pending</option>
+                <option>Only blocked</option>
+              </select>
+              <svg class="triangle"><use xlink:href="/united-styles/icons/icons.svg#triangle" /></svg>
+            </div>
+          </div>
+          <div class="width-4">
+            <div class="inline select field">
+              <select>
+                <option>Order by id descending</option>
+                <option>Order by name ascending</option>
+              </select>
+              <svg class="triangle"><use xlink:href="/united-styles/icons/icons.svg#triangle" /></svg>
+            </div>
+          </div>
+        </div>
+        <div class="right buttons">
+          <button type="submit" class="small blue full">Filter</button>
+        </div>
+      </fieldset>
+    </form>
   </aside>
 
   <section class="list">

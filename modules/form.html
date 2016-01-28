@@ -1,0 +1,165 @@
+---
+title: Form
+icon: form
+layout: plain
+---
+
+<nav class="absolute breadcrumb">
+  <a class="sidebar-toggler" onClick="toggleSidebar();"><span>Toggle menu</span></a>
+  <ul>
+    <li><a href="">United</a></li>
+    <li><a href="">Modules</a></li>
+    <li><a href="">Form Module</a></li>
+  </ul>
+</nav>
+
+<div class="br"></div>
+
+<section class="container">
+  <header class="centered" style="max-width:500px; margin: 0 auto;">
+    <svg class="huge icon"><use xlink:href="/united-styles/icons/icons.svg#form" /></svg>
+    <h2>Form Module</h2>
+    <p class="lead">The form module shows an example how a model create/update
+      form can look like.</p>
+  </header>
+
+  <form>
+    <fieldset>
+      <legend class="responsive-centered">1. Basic properties</legend>
+      <div class="row">
+        <div class="width-6">
+          <div class="inline field">
+            <label for="input-61">Firstname</label>
+            <input type="text" id="input-61" placeholder="Fill in your first name" required="required" />
+          </div>
+        </div>
+        <div class="width-6">
+          <div class="inline field">
+            <label for="input-62">Lastname</label>
+            <input type="text" id="input-62" placeholder="Fill in your last name" required="required" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="width-6">
+          <div class="inline field">
+            <label for="input-62">Street</label>
+            <input type="text" id="input-62" />
+          </div>
+        </div>
+        <div class="width-3">
+          <div class="inline field">
+            <label class="auto-width" for="input-63">Number</label>
+            <input type="text" size=10 id="input-63" />
+          </div>
+        </div>
+        <div class="width-3">
+          <div class="inline field">
+            <label class="auto-width" for="input-64">ZIP</label>
+            <input type="number" id="input-64" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="inline field">
+          <label for="input-66">Username</label>
+          <input id="input-66" type="text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="inline field">
+          <label for="input-67">Website</label>
+          <div class="labeled inline field">
+            <label for="input-67">http://</label>
+            <input type="text" id="input-67" />
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend class="responsive-centered">2. Metadata</legend>
+      <div class="row">
+        <div class="width-6">
+          <div class="inline field">
+            <label>Skills</label>
+            <div class="group">
+              <div class="checkbox field">
+                <input id="skills-1" type="checkbox" />
+                <label for="skills-1">HTML</label>
+              </div>
+              <div class="checkbox field">
+                <input id="skills-2" type="checkbox" />
+                <label for="skills-2">CSS</label>
+              </div>
+              <div class="checkbox field">
+                <input id="skills-3" type="checkbox" />
+                <label for="skills-3">JS</label>
+              </div>
+              <div class="checkbox field">
+                <input id="skills-4" type="checkbox" />
+                <label for="skills-4">PHP</label>
+              </div>
+              <div class="checkbox field">
+                <input id="skills-5" type="checkbox" />
+                <label for="skills-5">Ruby</label>
+              </div>
+            </div>
+            <div class="group">
+              <div class="checkbox field">
+                <input id="skills-6" type="checkbox" />
+                <label for="skills-6">Symfony</label>
+              </div>
+              <div class="checkbox field">
+                <input id="skills-7" type="checkbox" />
+                <label for="skills-7">Rails</label>
+              </div>
+              <div class="checkbox field">
+                <input id="skills-8" type="checkbox" />
+                <label for="skills-8">Sails</label>
+              </div>
+              <div class="checkbox field">
+                <input id="skills-9" type="checkbox" />
+                <label for="skills-9">Laravel</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-6">
+          <div class="inline field">
+            <label>Work experience</label>
+            <div class="group">
+              <div class="radio field">
+                <input name="experience" id="experience-1" type="radio" />
+                <label for="experience-1">0-5 years</label>
+              </div>
+              <div class="radio field">
+                <input name="experience" id="experience-2" type="radio" />
+                <label for="experience-2">5-10 years</label>
+              </div>
+              <div class="radio field">
+                <input name="experience" id="experience-3" type="radio" />
+                <label for="experience-3">> 10 years</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="inline field">
+          <label for="input-68">Message</label>
+          <textarea id="input-68" placeholder="Please introduce yourself..."></textarea>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="hr"></div>
+
+    <div class="responsive-centered right no-padding buttons">
+      <a class="grey button">Cancel</a>
+      <button type="submit" class="blue button">Save</button>
+    </div>
+  </form>
+</section>
+
+<div class="br"></div>
